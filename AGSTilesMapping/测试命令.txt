@@ -1,0 +1,2 @@
+﻿-i D:\测试数据\省级平台测试数据\中国矢量区划图.shp -o d:\outlayername1 --minL 0 --maxL 19 --threads 7   地理坐标系
+-i D:\测试数据\省级平台测试数据\testbigdata\TE520526_dwg_Polygon.shp -o d:\outlayername --minL 0 --maxL 19 --threads 7   投影坐标系

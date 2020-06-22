@@ -1,0 +1,1405 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ESRI.ArcGIS.ADF.Connection</name>
+    </assembly>
+    <members>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.ResourceUtility">
+            <summary>
+            Resource.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ResourceUtility.GetResourceString(System.String)">
+            <summary>
+            Get resource string
+            </summary>
+            <param name="name">Resource name</param>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection">
+            <summary>
+            The connection to a Server Object Manager on an ArcGIS Server.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.IServerConnection">
+            <summary>
+            Represents a connection to a server.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IServerConnection.IsAlive">
+            <summary>
+            Whether the connection is alive.
+            </summary>
+            <returns>Whether connection is alive.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.#ctor">
+            <summary>
+            Initializes a new instance of the AGSServerConnection class.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.#ctor(System.String,ESRI.ArcGIS.ADF.Identity)">
+            <summary>
+            Initializes a new instance of the AGSServerConnection class with the specified parameters
+            </summary>
+            <param name="host">Host name of ArcGIS Server Object Manager Machine</param>
+            <param name="identity">
+            	<see cref="T:ESRI.ArcGIS.ADF.Identity"/> with username and password
+                for the server.
+            </param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.#ctor(System.String,ESRI.ArcGIS.ADF.Identity,System.String)">
+            <summary>
+            Initializes a new instance of the AGSServerConnection class with the specified parameters
+            </summary>
+            <param name="host">Host name of ArcGIS Server Object Manager Machine</param>
+            <param name="identity"><see cref="T:ESRI.ArcGIS.ADF.Identity"/> with username and password
+                for the server.</param>
+            <param name="userInfo">User or role to use for checking permissions on server services.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.#ctor(System.String,ESRI.ArcGIS.ADF.Identity,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the AGSServerConnection class with the specified parameters
+            </summary>
+            <param name="host">Host name of machine where the ArcGIS Server Object Manager exists</param>
+            <param name="identity">
+            	<see cref="T:ESRI.ArcGIS.ADF.Identity"/> with username and password
+                for the server.
+            </param>
+            <param name="connect">Indicates whether to connect on initialization.</param>
+            <param name="releaseServerOnDispose">Indicates if Dispose should also release the RCWs for the ServerObjectManager and the ServerObjectAdmin.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.#ctor(System.String,ESRI.ArcGIS.ADF.Identity,System.Boolean)">
+            <summary>
+            Initializes a new instance of the AGSServerConnection class with the specified parameters
+            </summary>
+            <param name="host">Host name of machine where the ArcGIS Server Object Manager exists</param>
+            <param name="identity">
+            	<see cref="T:ESRI.ArcGIS.ADF.Identity"/> with username and password
+                for the server.
+            </param>
+            <param name="connect">Indicates whether to connect on initialization.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.#ctor(System.String,ESRI.ArcGIS.ADF.Identity,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the AGSServerConnection class with the specified parameters
+            </summary>
+            <param name="host">Host name of machine where the ArcGIS Server Object Manager exists</param>
+            <param name="identity"><see cref="T:ESRI.ArcGIS.ADF.Identity">
+            Identity</see> for connecting to the server.</param>
+            <param name="userInfo">User information to check for permissions.</param>
+            <param name="connect">Indicates whether to connect on initialization.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.Finalize">
+            <summary>
+            Default class destructor
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.Dispose">
+            <summary>
+            Implementation of IDisposable method Dispose()
+            The Dispose method should release all the resources that it owns for unmanaged code resources.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.Dispose(System.Boolean)">
+            <summary>
+            Dispose method implementation from IDisposable Interface
+            </summary>
+            <param name="disposing">Boolean value indicating to the method whether or not it should also dispose managed objects</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.Connect">
+            <summary>
+            Connect to the ArcGIS Server at the specified Host
+            </summary>
+            <exception cref="T:ESRI.ArcGIS.ADF.Connection.ServerHostNullException"></exception>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.Connect(System.Boolean)">
+            <summary>
+            Connect to the ArcGIS Server at the specified Host
+            </summary>
+            <param name="throwExceptionOnUnauthorizedAccess">Controls whether an exception is thrown when a UnAuthorizedAcessException is caught when connecting.</param>
+            <exception cref="T:ESRI.ArcGIS.ADF.Connection.ServerHostNullException"></exception>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.IsAlive">
+            <summary>
+            True if the ServerConnection is established, false otherwise.
+            </summary>
+            <returns>True if the ServerConnection is established, false otherwise.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.GetServerObjectNames">
+            <summary>Get a list of services available at an ArcGIS Server host.</summary>
+            <returns>An array of ServerObjectName objects.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.GetServerObjectNames(System.String)">
+            <summary>
+            Get a list of services of the specified type available at an ArcGIS Server
+            host.
+            </summary>
+            <returns>An ArrayList of ServerObjectName objects.</returns>
+            <remarks>
+            	<para>The serverObjectType value should be a string value matching one of the
+                constants in ESRI.ArcGIS.ADF.ArcGISServer.Constants:</para>
+            	<list type="bullet">
+            		<item>MapServer</item>
+            		<item>GeocodeServer</item>
+            		<item>GeoDataServer</item>
+            		<item>GPServer</item>
+            		<item>NAServer</item>
+            	</list>
+            </remarks>
+            <param name="serverObjectType">Type of server object.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.GetExtensionsForServerObject(ESRI.ArcGIS.ADF.Connection.AGS.ServerObjectName)">
+            <seealso cref="T:System.Collections.Specialized.StringCollection"/>
+            <seealso cref="T:ESRI.ArcGIS.Server.IServerObject"/>
+            <summary>
+            Return a collection of the names of the extensions associated with a
+            service.
+            </summary>
+            <returns>
+            	<see cref="T:System.Collections.Specialized.StringCollection"/> of extensions
+                available for the server object.
+            </returns>
+            <remarks>
+            	<para>The extensions for a service may include:</para>
+            	<list type="bullet">
+            		<item>KmlServer - KML service</item>
+            		<item>MobileServer - Mobile data service</item>
+            		<item>NAServer - Network Analyst service</item>
+            		<item>WMSServer - OGC Web Mapping Service</item>
+            		<item>WFSServer - OGC Web Feature Service</item>
+            	</list>
+            </remarks>
+            <param name="sonm"><see cref="T:ESRI.ArcGIS.ADF.Connection.AGS.ServerObjectName"/> object.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.GetExtensionsForServerObject(System.String,System.String)">
+            <seealso cref="T:System.Collections.Specialized.StringCollection"/>
+            <seealso cref="T:ESRI.ArcGIS.Server.IServerObject"/>
+            <summary>
+            Returns a collection of the names of the extensions associated with a
+            service.
+            </summary>
+            <returns><see cref="T:System.Collections.Specialized.StringCollection"/> of extensions.</returns>
+            <remarks>
+            	<para>The serverObjectType value should be a string value matching one of the
+                constants in ESRI.ArcGIS.ADF.ArcGISServer.Constants:</para>
+            	<list type="bullet">
+            		<item>MapServer</item>
+            		<item>GeocodeServer</item>
+            		<item>GeoDataServer</item>
+            		<item>GPServer</item>
+            		<item>NAServer</item>
+            	</list>
+                <para>The extensions for a service may include:</para>
+                <list type="bullet">
+                    <item>KmlServer - KML service</item>
+                    <item>MobileServer - Mobile data service</item>
+                    <item>NAServer - Network Analyst service</item>
+                    <item>WMSServer - OGC Web Mapping Service</item>
+                    <item>WFSServer - OGC Web Feature Service</item>
+                </list>
+            </remarks>
+            <param name="serverObjectName">The name of the Server object (service).</param>
+            <param name="serverObjectType">The type name of the Server Object.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.GetDataFramesFromMapServerObject(System.String)">
+            <summary>Gets the names of dataframes from a map server object.</summary>
+            <returns>An array of dataframe names as strings</returns>
+            <remarks>
+            An ArcGIS Server map service is based on a map document (usually an .mxd file)
+            that can contain multiple data frames, each with separate sets of layers and symbology.
+            This method retrieves a list of these data frames.
+            </remarks>
+            <param name="serverObject">The map server object's name.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.GetDataFramesFromMapServerObject(System.String,System.Boolean)">
+            <summary>
+            Gets the dataframes from a map server object
+            </summary>
+            <param name="serverObject">The map server object's name.</param>
+            <param name="forOneDataFrameReturnNameAsDefault">If true and
+            only one data frame is in the map, returns "(default)".</param>
+            <returns>An array list of map server object names as strings</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.GetDataFramesFromMapServerObject(ESRI.ArcGIS.Carto.IMapServer)">
+            <summary>
+            Gets the dataframes from a map server object
+            </summary>
+            <returns>An array of data frame names as strings.</returns>
+            <remarks>
+            An ArcGIS Server map service is based on a map document (usually an .mxd file)
+            that can contain multiple data frames, each with separate sets of layers and symbology.
+            This method retrieves a list of these data frames.
+            </remarks>
+            <param name="serverObject">The map server object.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.GetDataFramesFromMapServerObject(ESRI.ArcGIS.Carto.IMapServer,System.Boolean)">
+            <summary>
+            Gets the dataframes from a map server object
+            </summary>
+            <param name="serverObject">The map server object.</param>
+            <param name="forOneDataFrameReturnNameAsDefault">If true and
+            only one data frame is in the map, returns "(default)".</param>
+            <returns>An array list of map server object names as strings</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.IsMapServer(System.String)">
+            <summary>
+            Indicates whether the specified server object is a map server.
+            </summary>
+            <param name="service">The name of the server object.</param>
+            <returns>True if server object is a map server.  False if it is not.</returns>
+            <remarks>Please note that a service name can be shared by more than one type of server.  
+            For example, a GP service and a map service can be named the same.</remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.IsGeocodeServer(System.String)">
+            <summary>
+            Indicates whether the specified server object is a geocode server.
+            </summary>
+            <param name="service">The name of the server object.</param>
+            <returns>True if server object is a geocode server.  False if it is not.</returns>
+            <remarks>Please note that a service name can be shared by more than one type of server.  
+            For example, a GP service and a map service can be named the same.</remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.IsGPServer(System.String)">
+            <summary>
+            Indicates whether the specified server object is a geoprocessing server.
+            </summary>
+            <param name="service">The name of the server object.</param>
+            <returns>True if server object is a geoprocessing server.  False if it is not.</returns>
+            <remarks>Please note that a service name can be shared by more than one type of server.  
+            For example, a GP service and a map service can be named the same.</remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.GetServiceTypes(System.String)">
+            <summary>
+            Gets the service types for the specified service name.
+            </summary>
+            <returns>
+            A List of the types of service supported, such as "MapServer", "GeocodeServer",
+            or "GPServer".
+            </returns>
+            <param name="service">Name of the service</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.IsServerObjectPooled(ESRI.ArcGIS.ADF.Connection.AGS.ServerObjectName)">
+            <summary>
+            Indicates whether the specified server object is pooled.
+            </summary>
+            <param name="serverObjectName">The name of the server object.</param>
+            <returns>True if server object is pooled.  False if it is not.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.IsServerObjectPooled(System.String,System.String)">
+            <summary>
+            Indicates whether the specified server object is pooled.
+            </summary>
+            <param name="serverObjectName">The name of the server object.</param>
+            <param name="serverObjectType">The type of server object.</param>
+            <returns>True if server object is pooled.  False if it is not.</returns>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.Host">
+            <summary>Host name of the ArcGIS Server - Server Object Manager (SOM) machine.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.ServerObjectManager">
+            <summary>
+            ArcGIS Server IServerObjectManager object
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.ServerObjectAdmin">
+            <summary>
+            ArcGIS Server IServerObjectManagerAdmin object
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnection.IsConnected">
+            <summary>
+            True if the ServerConnection is established, false otherwise.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnection">
+            <summary>
+            Class used to send requests and responses via TCP to an ArcIMS Application Server.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.IMS.IMSServerConnection">
+            <summary>
+            Abstract class for common functionality of a connection to an ArcIMS server.
+            </summary>
+            <remarks>
+            	<para>
+                    An IMS server connection is used to communicate with an ArcIMS server without
+                    going through a
+                    <a href="ms-help://ESRI.EDNv9.3/ArcGIS.ADF.Web.UI.WebControls/ESRI.ArcGIS.ADF.Web.UI.WebControls~ESRI.ArcGIS.ADF.Web.UI.WebControls.Map.html">
+                    Map</a> control or
+                    other ESRI Web ADF controls. Use one of the derived classes to actually create
+                    a connection:
+                </para>
+            	<list type="bullet">
+            		<item>
+            			<see cref="T:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnection">TCPConnection</see>
+                        - for connecting over a local network using a TCP/IP connection.
+                    </item>
+            		<item>
+            			<see cref="T:ESRI.ArcGIS.ADF.Connection.IMS.HTTPConnection">HTTPConnection</see>
+                        - for connecting over the Internet using an HTTP connection.
+                    </item>
+            	</list>
+            </remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.IMSServerConnection.Send(System.String)">
+            <summary>
+            Sends a request to the specified service.
+            </summary>
+            <param name="request">A valid ArcXML request.</param>
+            <returns>ArcXML response from the ArcIMS Application Server.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.IMSServerConnection.Send(System.String,System.String)">
+            <summary>
+            Sends a request to the specified service using a custom service.
+            </summary>
+            <returns>ArcXML response from the ArcIMS Application Server.</returns>
+            <param name="request">A valid ArcXML request.</param>
+            <param name="customservice">
+            The custom service (Query, Geocode, Extract) associated with the specified
+            service name.
+            </param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.IMSServerConnection.ClientServicesArray">
+            <summary>
+            Convenience method to retrieve an ArrayList of services associated with an ArcIMS site.
+            </summary>
+            <returns><see cref="T:System.Collections.ArrayList"/> of service names.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.IMSServerConnection.ClientServicesArray(ESRI.ArcGIS.ADF.Connection.IMS.ServerType[],System.Boolean)">
+            <summary>
+            Convenience method to retrieve an ArrayList of services associated with an ArcIMS site.
+            </summary>
+            <returns><see cref="T:System.Collections.ArrayList"/> of services.</returns>
+            <param name="filterServerType">Specify the Services based on this ServerType[] value (e.g. ImageServer)</param>
+            <param name="ignoreCase">Set true to ignore the case of filterType string, false otherwise (default: True)</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.IMSServerConnection.GetClientServicesXml">
+            <summary>
+            Retrieves the catalog of services from the server.
+            </summary>
+            <returns>XML document with services.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.IMSServerConnection.IsAlive">
+            <summary>
+            Check whether the server connection is alive.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.IMSServerConnection.Dispose">
+            <summary>
+            Empty method.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.IMSServerConnection.ServiceName">
+            <summary>
+            Service name to which requests are sent.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnection.#ctor">
+            <summary>
+            Constructs a TCPConnection object.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnection.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructs a TCPConnection object.
+            </summary>
+            <param name="host">Name of machine hosting the ArcIMS App Server.</param>
+            <param name="port">Port at which the ArcIMS App Server is hosted.</param>
+            <exception cref="T:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnectionException">Connect has failed.  
+            The InnerException property gives access to the exception
+            that triggered this one.</exception>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnection.Finalize">
+            <summary>
+            Destructor.  Closes connection to ArcIMS Application Server if connected.
+            </summary>
+            <remarks>
+              The InnerException property gives access to the exception
+            that triggered this one.
+            </remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnection.IsAlive">
+            <summary>
+            Check to see if there is a valid connection to the ArcIMS server.
+            </summary>
+            <returns>Boolean value corresponding to whether there is a valid connection to the ArcIMS server.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnection.Send(System.String)">
+            <summary>
+            Sends a request.
+            </summary>
+            <param name="request">Request to send.</param>
+            <returns>Response received.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnection.Send(System.String,System.String)">
+            <summary>
+            Sends a request.
+            </summary>
+            <param name="request">Request to send.</param>
+            <param name="customservice">Custom service to send request to.</param>
+            <returns>Response from the service.</returns>
+            <remarks>
+            If service not found, return string is error message sent by server in format:
+             "Error: Requested Service is not available."<P></P>
+            If request is not valid, return string is error in format:
+             "&lt;ERROR&gt;Invalid catalog function.&lt;/ERROR&gt;"
+            </remarks>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnection.Host">
+            <summary>
+            Gets or sets the name of machine hosting the ArcIMS Application Server.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnection.Port">
+            <summary>
+            Gets or sets the port at which the ArcIMS Application Server is hosted.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnection.SpatialProperties">
+            <summary>
+            Spatial Server properties (esrimap_prop) file.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnection.ReceiveTimeOut">
+            <summary>
+            Gets or sets the receive timeout.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnection.SendTimeOut">
+            <summary>
+            Gets or sets the send timeout.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.IMS.ArcXMLHandler">
+            <summary>
+            ArcIMS ArcXML Handler for handling ArcIMS AXL http request.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.ArcXMLHandler.#ctor">
+            <summary>
+            Construct ArcXMLHandler object.
+            </summary> 
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.ArcXMLHandler.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            Handles ArcIMS ArcXML Handler for handling ArcIMS AXL http request..
+            </summary>
+            <param name="context">Specifies Http context.</param>
+            <returns>void</returns> 
+            <remarks>Processes ArcIMS AXL request and command request.
+            Exception thrown during processing of request is returned as message in HttpContext response.
+            </remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.ArcXMLHandler.ProcessPostRequest(System.Web.HttpRequest)">
+            <summary>
+            Process Post request.  Retrieve Axl Request from Http Context.
+            </summary>
+            <param name="ClientRequest">Http request.</param>
+            <returns>String containing Axl Request</returns> 
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.ArcXMLHandler.ProcessCommandRequest(System.String)">
+            <summary>
+            Handle Command request.
+            </summary>
+            <param name="AxlRequest">command request to handle.</param>
+            <returns>String response for request.</returns> 
+            <remarks>cmd request Ping, ConnectorPing and GetVersion handled.
+            Reponse is sent as Html response instead of ArcIMS AXL response.</remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.ArcXMLHandler.SendAxlRequest(System.String)">
+            <summary>
+            Send Axl request to ArcIMS Server.
+            </summary>
+            <param name="AxlRequest">Axl request to send to ArcIMS server.</param>
+            <returns>String response from ArcIMS Server</returns> 
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.ArcXMLHandler.GetWebConfiguration">
+            <summary>
+            Retrieve Server setting from web.config file appsetting key.
+            </summary>
+            <returns>void</returns> 
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.ArcXMLHandler.GetESRImapProp">
+            <summary>
+            Builds server property string from setting in web.config file.
+            </summary>
+            <returns>String, Esrimap properties setting.</returns> 
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.ArcXMLHandler.GetArcXMLHandlerVersion(System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            Gets the version number of the ArcXMLHandler library.
+            </summary>
+            <param name="MajorVersion">Major Version number.</param>
+            <param name="MinorVersion">Minor Version number.</param>
+            <param name="MajorRevision">Major Revision number.</param>
+            <param name="MinorRevision">Minor Revision number.</param>
+            <returns>String, version number in ref strings passed to function</returns> 
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.ArcXMLHandler.CheckForbidden(System.String,System.String,System.String,System.String)">
+            <summary>
+            Check for Forbidden elements in XML file.
+            </summary>
+            <param name="xmlFile">Path to xml file.</param>
+            <param name="appUser">Name of user.</param>
+            <param name="appHost">IP address of client computer.</param>
+            <param name="AxlRequest">Axl request to send to ArcIMS server.</param>
+            <returns>bool, true if request is allowed, false otherwise</returns> 
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.ArcXMLHandler.CheckForbiddenTag(System.String[],System.String)">
+            <summary>
+            Check for tag in Request.
+            </summary>
+            <param name="ForbiddenValue">Axl request Forbiddentag.</param>
+            <param name="AxlRequest">Axl request to send to ArcIMS server.</param>
+            <returns>bool, true if valid request, false otherwise.</returns> 
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.ArcXMLHandler.IsReusable">
+            <summary>
+            IsReusable.
+            </summary>
+            <returns>true.</returns> 
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.AGS.Constants">
+            <summary>
+            Summary description for Constants.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.IServerConnectionFactory">
+            <summary>
+            Interface for classes that create a connection to a server.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IServerConnectionFactory.CreateServerConnection(System.String,ESRI.ArcGIS.ADF.Identity)">
+            <summary>
+            Creates a new connection to the server.
+            </summary>
+            <param name="connectionString">String with connection parameters for the server.</param>
+            <param name="identity">User identity with username and password.</param>
+            <returns>A new server connection.</returns>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.ConnectionManager">
+            <summary>
+            The ConnectionManager object manages the ServerConnections for the ADF. If
+            configured appropriately, the ConnectionManager will accommodate both Failover and
+            Round-robin scenarios. If none are specified, will hand out ServerConnections as
+            configured by the web controls.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionManager.#ctor">
+            <summary>
+            Default, parameterless constructor
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionManager.#ctor(ESRI.ArcGIS.ADF.Identity)">
+            <summary>
+            Default Constructor
+            </summary>
+            <param name="identity">The identity used to connect to the data source.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionManager.#ctor(System.String,ESRI.ArcGIS.ADF.Identity)">
+            <summary>
+            Overloaded - Constructor to pass in the ConnectionManager Configuration uri
+            </summary>
+            <param name="xmlUri">
+            The physical location of the configuration file.  This can be either a remote or local location.
+            </param>
+            <param name="identity">The identity used to connect to the data source.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionManager.Add(ESRI.ArcGIS.ADF.Connection.Connection)">
+            <summary>Adds a new item to the collection.</summary>
+            <param name="newItem">The item to add.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionManager.Remove(ESRI.ArcGIS.ADF.Connection.Connection)">
+            <summary>Removes the item from the collection.</summary>
+            <param name="item">Item to remove.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionManager.Find(System.String,System.String)">
+            <summary>Finds the item in the collection with the given name.</summary>
+            <returns>The item with the passed in name, or null if not found.</returns>
+            <param name="name">Name of the item to find.</param>
+            <param name="serverType">Type of server (ArcGIS, ArcIMS, etc.).</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionManager.NameExists(System.String)">
+            <summary>
+            Indicates whether an item of the given name exists.
+            </summary>
+            <param name="name">Name of the item to check for.</param>
+            <returns>True if item exists, false if not.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionManager.ServerConnection(System.String,System.String)">
+            <summary>Creates and returns a valid ServerConnection for the server host.</summary>
+            <returns>
+                An <see cref="T:ESRI.ArcGIS.ADF.Connection.IServerConnection">IServerConnection</see>
+                object.
+            </returns>
+            <param name="host">The name of the ArcGIS Server host machine</param>
+            <param name="serverType">Type of server (ArcGIS, ArcIMS, etc.).</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionManager.WriteXml">
+            <summary>
+            Creates an XmlDocument of the current state of the ConnectionManager
+            </summary>
+            <returns><see cref="T:System.Xml.XmlDocument"/></returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionManager.ReadXml(System.Xml.XmlDocument)">
+            <summary>
+            Populates the ConnectionManager with the serialized state of the XmlDocument
+            </summary>
+            <param name="doc"><see cref="T:System.Xml.XmlDocument"/></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.ConnectionManager.Item(System.Int32)">
+            <summary>
+            The item at the given index in the collection.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.ConnectionItemCollection">
+            <summary>
+            ConnectionItemCollection contains a collection of ConnectionItem objects
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionItemCollection.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionItemCollection.Add(ESRI.ArcGIS.ADF.Connection.ConnectionItem)">
+            <summary>
+            Add a new item to the collection.
+            </summary>
+            <param name="newItem">The item to add.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionItemCollection.Remove(ESRI.ArcGIS.ADF.Connection.ConnectionItem)">
+            <summary>
+            Remove the item from the collection.
+            </summary>
+            <param name="item">Item to remove.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionItemCollection.Find(System.String)">
+            <summary>
+            Find the item in the collection with the given name.
+            </summary>
+            <param name="name">Name of the item to find.</param>
+            <returns>The item with the passed in name.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionItemCollection.NameExists(System.String)">
+            <summary>
+            Indicates whether an item of the given name exists.
+            </summary>
+            <param name="name">Name of the item to check for.</param>
+            <returns>True if item exists, false if not.</returns>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.ConnectionItemCollection.Item(System.Int32)">
+            <summary>
+            The item at the given index in the collection.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnectionFactory">
+            <summary>Used as factory to create a new connection to an ArcGIS Server.</summary>
+            <remarks>
+            This method is used to create a new connection to an ArcGIS Server machine
+            without requiring a Map or other control on the page.
+            </remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnectionFactory.#ctor">
+            <summary>Default Constructor.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.AGSServerConnectionFactory.CreateServerConnection(System.String,ESRI.ArcGIS.ADF.Identity)">
+            <summary>Returns an ArcGIS Server connection instance.</summary>
+            <returns>Server connection instance type-casted to IServerConnection.</returns>
+            <param name="connectionString">Contains the name of the ArcGIS host.</param>
+            <param name="identity">The identity with credentials for connecting to the ArcGIS Server.</param>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.ConnectionItem">
+            <summary>
+            The connection item is the name of a Server to be used in AGS Recovery.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionItem.#ctor">
+            <summary>
+            Default Contructor for the ConnectionItem type
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionItem.#ctor(System.String)">
+            <summary>
+            Overloaded - Contructor that accepts a name of the ArcGIS Server machine.
+            </summary>
+            <param name="name">A valid ArcGIS Server name where a ServerObjectManager exists</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionItem.WriteXml(System.Xml.XmlDocument)">
+            <summary>
+            Creates an Item XML Element with the Name of this Object
+            </summary>
+            <param name="doc"><see cref="T:System.Xml.XmlDocument"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionItem.ReadXml(System.Xml.XmlNode)">
+            <summary>
+            Hydrates this type with the information from the XmlNode
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.ConnectionItem.Name">
+            <summary>
+            The name of the server that contains an ArcGIS Server Object Manager
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.AGS.ComHelper">
+            <summary>
+            Summary description for ComHelper.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.ComHelper.Dispose(System.Boolean)">
+            <summary>
+            Dispose method implementation from IDisposable Interface
+            </summary>
+            <param name="disposing">Boolean value indicating to the method whether or not it should also dispose managed objects</param>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.MaxConnectionException">
+            <summary>
+            An exception thrown when the maximum number of unsuccessful connection attempts is exceeded.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.MaxConnectionException.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.MaxConnectionException.#ctor(System.Int32)">
+            <summary>
+            Constructor taking the maximum connection attempts.
+            </summary>
+            <param name="maxAttempts">The maximum number of connection attempts.</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.MaxConnectionException.Message">
+            <summary>
+            Message describing the exception for maximum connection attempts exceeded.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.FailedConnection">
+            <summary>
+            Summary description for FailedConnection.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnectionException">
+            <summary>
+            The ArcIMSConnectionException is thrown if an operation fails when connecting to an 
+            ArcIMS Application server, disconnecting from it, 
+            sending a request to it, or receiving a response from it.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnectionException.#ctor">
+            <summary>
+            Parameterless constructor
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnectionException.#ctor(System.String)">
+            <summary>
+            Constructor with message parameter.
+            </summary>
+            <param name="message">The exception's Message property.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.TCPConnectionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor with message and inner exception parameters.
+            </summary>
+            <param name="message">The exception's Message property.</param>
+            <param name="innerEx">The inner exception that caused this exception.</param>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.IMS.Scheme">
+            <summary>
+            Defines the ways to connect with the ArcIMS Application Server.
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.IMS.Scheme.HTTP">
+            <summary>
+            Uses an HTTP URI to connect with the ArcIMS Application Server.
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.IMS.Scheme.HTTPS">
+            <summary>
+            Uses an HTTPS URI to connect with the ArcIMS Application Server.
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.IMS.Scheme.TCP">
+            <summary>
+            Uses a TCP/IP connection with the ArcIMS Application Server.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.ConnectionNotFoundException">
+            <summary>
+            Exception thrown when a connection is not found.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionNotFoundException.#ctor">
+            <summary>
+            Overloaded. Initializes a new instance of the ConnectionNotFoundException class.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionNotFoundException.#ctor(System.String)">
+            <summary>
+            Overloaded. Initializes a new instance of the ConnectionNotFoundException class.
+            </summary>
+            <param name="host">The name of a ArcGIS Server machine.</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.ConnectionNotFoundException.Message">
+            <summary>
+            Gets a message that describes the current exception.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.IMS.IMSServerConnectionFactory">
+            <summary>
+            A factory class for creating connections to an ArcIMS server.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.IMSServerConnectionFactory.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.IMSServerConnectionFactory.CreateServerConnection(System.String,ESRI.ArcGIS.ADF.Identity)">
+            <summary>
+            Creates a new connection to an ArcIMS server.
+            </summary>
+            <param name="connectionString">The connection string, using
+            http or "server@port" format.</param>
+            <param name="identity">Identity for connecting to the server, if needed.</param>
+            <returns>An IMS server connection of the appropriate type.</returns>
+            <remarks>
+            This method creates either a 
+            The connection string should be in a format appropriate for 
+            either an 
+            </remarks>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.ServerHostNullException">
+            <summary>
+            Exception thrown when a ServerConnection's Host is not valid.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ServerHostNullException.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.ServerHostNullException.Message">
+            <summary>
+            The exception message.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.RoundRobinException">
+            <summary>
+            Exception thrown when a RoundRobin connection fails.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.RoundRobinException.#ctor">
+            <summary>
+            Overloaded. Initializes a new instance of the RoundRobinException class.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.RoundRobinException.#ctor(System.String)">
+            <summary>
+            Overloaded. Initializes a new instance of the RoundRobinException class.
+            </summary>
+            <param name="host">Name of Connection to server that failed for RoundRobin</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.RoundRobinException.Message">
+            <summary>
+            Gets a message that describes the current exception.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.ConnectionMode">
+            <summary>
+            ConnectionMode is implemented within the ADF to allow the web application to 
+            respond to backup/recovery situations with the server.  The ConnectionMode is 
+            used to define the type of failover to perform.
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.ConnectionMode.Default">
+            <summary>
+            Does not perform any type of backup/recovery
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.ConnectionMode.Failover">
+            <summary>
+            Reroute all requests to the alternate connection entry
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.ConnectionMode.RoundRobin">
+            <summary>
+            Use the round-robin logic to route requests to different ArcGIS Server ServerObjectManagers
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.IMS.ServerType">
+            <summary>Type used to identify ArcIMS Server Types.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.ServerType.#ctor">
+            <summary>Default constructor.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.ServerType.#ctor(System.String,System.String)">
+            <summary>Constructor taking the service type and version.</summary>
+            <param name="type">The type of server: ImageServer, FeatureServer, or MetaDataServer.</param>
+            <param name="version">ArcMap to specify ArcMap Server, empty for ArcXML-based image services.</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.ServerType.Type">
+            <summary>
+                Type of ArcIMS server: 
+                <example>ImageServer, FeatureServer, MetaDataServer.</example>
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.ServerType.Version">
+            <summary>Identify a specific version of the ServerType (i.e., ArcMap or empty).</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.IMS.HTTPConnection">
+            <summary>Class used to send requests and responses via HTTP to an ArcIMS server.</summary>
+            <remarks>
+            This type of server connection uses an HTTP connection to communicate with the
+            ArcIMS server. Since it uses standard HTTP port (usually 80), it can communicate over
+            the Internet. It communicates via the ArcIMS Servlet Connector. Therefore the ArcIMS
+            Servlet Connector must be available on the remote server and must be communicating to
+            its ArcIMS Application Server in order to send requests.
+            </remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.HTTPConnection.#ctor(System.String)">
+            <summary>
+            Creates a new HTTPConnection object.
+            </summary>
+            <param name="uri">URI of the ArcIMS server. May include the scheme (http or https)
+            and a port (e.g., 80 or 8080).</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.HTTPConnection.Send(System.String)">
+            <summary>Sends an ArcXML request to the server.</summary>
+            <returns>The ArcXML response.</returns>
+            <param name="request">The ArcXML request to send.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.HTTPConnection.Send(System.String,System.String)">
+            <summary>Sends an ArcXML request to the server.</summary>
+            <returns>The ArcXML response.</returns>
+            <param name="request">The ArcXML request to send.</param>
+            <param name="customservice">The custom service (Query, Geocode, Extract) to send the request to.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.HTTPConnection.IsAlive">
+            <summary>
+            Check to see if there is a valid connection to the ArcIMS server.
+            </summary>
+            <returns>Boolean value corresponding to whether there is a valid connection to the ArcIMS server.</returns>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.HTTPConnection.Port">
+            <summary>Gets or sets the HTTP port for the server.</summary>
+            <remarks>Default is 80, the standard HTTP port.</remarks>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.HTTPConnection.User">
+            <summary>
+            Gets or sets the username associated with the user accessing the URI.
+            </summary>
+            <remarks>
+            Only required if the ArcIMS server is configured to require credentials for the
+            service being requested. The username and password are those set for the Servlet
+            Connector at the remote ArcIMS server.
+            </remarks>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.HTTPConnection.Password">
+            <summary>
+            Gets or sets the password associated with the user accessing the URI.
+            </summary>
+            <remarks>
+            Only required if the ArcIMS server is configured to require credentials for the
+            service being requested. The username and password are those set for the Servlet
+            Connector at the remote ArcIMS server.
+            </remarks>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.HTTPConnection.Timeout">
+            <summary>
+            Gets or sets the timeout associated with the HttpWebRequest object.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.IMS.HTTPConnection.Path">
+            <summary>
+            Gets or sets the path associated with the HttpWebRequest object.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.IMS.XML.AxlRequests">
+            <summary>
+            An ArcXML helper class that is used to generate commonly used ArcXML Requests.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.XML.AxlRequests.#ctor">
+            <summary>
+            Constructs a new instance of the AxlRequests class.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.XML.AxlRequests.GetClientServices">
+            <summary>
+            Generate a Get Client Services ArcXML Request string.
+            </summary>
+            <returns>A string that represents the ArcXML request: &lt;GETCLIENTSERVICES/&gt;</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.XML.AxlRequests.GetServiceInfo">
+            <summary>
+            Generate a Get Service Information ArcXML Request string
+            </summary>
+            <returns>A string that represents the ArcXML request: &lt;GET_SERVICE_INFO&gt; with all the boolean attributes set to false.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.XML.AxlRequests.GetAllServiceInfo">
+            <summary>
+            Generate a Get All Service Information ArcXML Request string
+            </summary>
+            <returns>A string that represents the ArcXML request: &lt;GET_SERVICE_INFO&gt; with all the boolean attributes set to true.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.IMS.XML.AxlRequests.GetFullExtent(System.Double,System.Double)">
+            <summary>
+            Retrieve the Full Extent of the ServiceName
+            </summary>
+            <param name="width">A double value that represents the width of the Image to generate.</param>
+            <param name="height">A double value that represents the height of the Image to generate.</param>
+            <returns>A string that represents the ArcXML request: &lt;GET_IMAGE&gt; with map size as specified by the parameters.</returns>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.AGS.ServerObjectName">
+            <summary>Information about an ArcGIS Server object (service).</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.ServerObjectName.#ctor">
+            <summary>Creates an empty ServerObjectName object.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.ServerObjectName.#ctor(System.String,System.String)">
+            <summary>Creates a ServerObjectName object with the specified name and type.</summary>
+            <param name="name">Name of the ServerObject</param>
+            <param name="type">Type of ServerObject (e.g., MapServer or GeocodeServer).</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.AGS.ServerObjectName.ToString">
+            <summary>
+            The name of the server object.
+            </summary>
+            <returns>The name of the server object.</returns>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.AGS.ServerObjectName.Name">
+            <summary>
+            The name of the server object.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.AGS.ServerObjectName.Type">
+            <summary>
+            The type of the server object.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.AGS.ServerObjectName.Extensions">
+            <seealso cref="T:System.Collections.Specialized.StringCollection"/>
+            <seealso cref="T:System.Collections.Specialized.StringCollection"/>
+            <summary>Get/Set a StringCollection of extensions associated with this service.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.FailoverException">
+            <summary>
+            Summary description for FailoverException.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.FailoverException.#ctor">
+            <summary>
+            Overloaded. Initializes a new instance of the FailoverException class.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.FailoverException.#ctor(System.String)">
+            <summary>
+            Overloaded. Initializes a new instance of the FailoverException class.
+            </summary>
+            <param name="host">The name of the ArcGIS Server host machine</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.FailoverException.Message">
+            <summary>
+            Gets a message that describes the current exception.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.ConnectionFailedException">
+            <summary>
+            Exception thrown when a connection fails.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionFailedException.#ctor">
+            <summary>
+            Overloaded. Initializes a new instance of the ConnectionFailedException class.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.ConnectionFailedException.#ctor(System.String)">
+            <summary>
+            Overloaded. Initializes a new instance of the ConnectionFailedException class.
+            </summary>
+            <param name="host">Name of Server Host that failed</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.ConnectionFailedException.Message">
+            <summary>
+            Gets a message that describes the current exception.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.Connection">
+            <summary>A generic connection to a data source used in the ESRI Web ADF.</summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.Connection.m_conItems">
+            <summary>
+            <see cref="T:ESRI.ArcGIS.ADF.Connection.ConnectionItemCollection"/>
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.Connection.m_activeIndex">
+            <summary>
+            Active index of Connection used from the ConnectionItemCollection
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.Connection.m_failedConnections">
+            <summary>
+            Connections that have failed and are in the retry state, are stored in this member.  
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.Connection.m_name">
+            <summary>
+            Member variable for the Connection Name
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.Connection.m_failedCheckInterval">
+            <summary>
+            The failed check interval number used to check between failed connection attempts. 
+            This # is per application requests.
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.Connection.m_maxAttempts">
+            <summary>
+            Maximum number of continuous unsuccessful attempts to connect to host(s).
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.Connection.m_currentAttempts">
+            <summary>
+            Current number of continuous unsuccesful attempts to connect to host(s).
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.Connection.m_mode">
+            <summary>
+            Mode of Connection
+            <see cref="T:ESRI.ArcGIS.ADF.Connection.ConnectionMode"/>
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.ADF.Connection.Connection.m_serverConnectionFactory">
+            <summary>
+            The factory is used give ServerConnection.(ArcGIS or ArcIMS)
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.#ctor">
+            <summary>Default Constructor.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.#ctor(ESRI.ArcGIS.ADF.Identity)">
+            <summary>Overloaded - Constructor to create the type with an identity.</summary>
+            <param name="identity">Identity used to connect to the data source.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.#ctor(ESRI.ArcGIS.ADF.Identity,System.String)">
+            <summary>
+            Overloaded - Constructor to create the type with an identity and server
+            type.
+            </summary>
+            <param name="identity">Identity used to connect to the data source.</param>
+            <param name="serverType">Type of server being connected to (ArcGIS, ArcIMS, etc.).</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.#ctor(System.String,ESRI.ArcGIS.ADF.Identity)">
+            <summary>
+            Overloaded - Contructor to create the type with a server name
+            </summary>
+            <param name="name">The name of a machine that contains an ArcGIS Server Object Manager</param>
+            <param name="identity">Identity used to connect to the data source.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.#ctor(System.String,ESRI.ArcGIS.ADF.Identity,System.String)">
+            <summary>
+            Overloaded - Contructor to create the type with a server name
+            </summary>
+            <param name="name">The name of a machine that contains an ArcGIS Server Object Manager</param>
+            <param name="identity">Identity used to connect to the data source.</param>
+            <param name="serverType">Type of server being connected to (ArcGIS, ArcIMS, etc.).</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.#ctor(ESRI.ArcGIS.ADF.Connection.ConnectionMode,ESRI.ArcGIS.ADF.Identity,System.Int32,System.Int32)">
+            <summary>Overloaded - Constructor with connection mode and identity.</summary>
+            <param name="mode">
+            	<see cref="T:ESRI.ArcGIS.ADF.Connection.ConnectionMode">ConnectionMode</see>
+                (Default, Failover, RoundRobin).
+            </param>
+            <param name="identity">Identity used to connect to the data source.</param>
+            <param name="failedCheckInterval">
+            Interval number used to check between failed connection attempts.  
+            This # is per applciation requests.
+            </param>
+            <param name="maxAttempts">
+            Number of times a failed connection is retried before marking as dead.
+            </param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.#ctor(System.String,ESRI.ArcGIS.ADF.Connection.ConnectionMode,ESRI.ArcGIS.ADF.Identity,System.Int32,System.Int32)">
+            <summary>Overloaded - Constructor with server name, connection mode, and identity.</summary>
+            <param name="name">The name of a machine that contains an ArcGIS Server Object Manager</param>
+            <param name="mode">
+            	<see cref="T:ESRI.ArcGIS.ADF.Connection.ConnectionMode">ConnectionMode</see>
+                (Default, Failover, RoundRobin).
+            </param>
+            <param name="identity">Identity used to connect to the data source.</param>
+            <param name="failedCheckInterval">
+            Interval number used to check between failed connection attempts. This # is per
+            application request.
+            </param>
+            <param name="maxAttempts">
+            Number of times a failed connection is retried before marking as dead.
+            </param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.Ping(System.String)">
+            <summary>
+            Overload - Checks the named server to determine the state of the server.
+            </summary>
+            <param name="serverName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.Failover">
+            <summary>
+            Obtains a ServerConnection taking into account Failover scenarios.
+            </summary>
+            <returns><see cref="T:ESRI.ArcGIS.ADF.Connection.IServerConnection"/></returns>
+            <exception cref="T:ESRI.ArcGIS.ADF.Connection.FailoverException"></exception>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.NextRoundRobinConnection">
+            <summary>
+            Obtains the next Server Connection from the Items Collection.
+            </summary>
+            <returns><see cref="T:ESRI.ArcGIS.ADF.Connection.IServerConnection"/></returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.getNextConnectionName">
+            <summary>
+            Returns the next connection name for the request
+            If the ConnectionMode is RoundRobin then the activeIndex is adjusted accordingly.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.allConnectionsFailed">
+            <summary>
+            Determines if any connections are left alive.
+            </summary>
+            <returns>True if it determines that any connections are left alive. false otherwise</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.retryServerConnection(ESRI.ArcGIS.ADF.Connection.FailedConnection)">
+            <summary>
+            Retries connection if within check interval defined in config otherwise will increment counter
+            </summary>
+            <param name="fcon"><see cref="T:ESRI.ArcGIS.ADF.Connection.FailedConnection"/></param>
+            <returns>True if retry succeeded, false otherwise</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.addServerToFailedConnections(System.String)">
+            <summary>
+            Adds the server to the Failed connections list
+            </summary>
+            <param name="serverName">Server to add to failed list</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.ServerConnection">
+            <summary>
+            Returns a valid ServerConnection
+            </summary>
+            <returns>An <see cref="T:ESRI.ArcGIS.ADF.Connection.IServerConnection"/> object.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.ServerConnection(ESRI.ArcGIS.ADF.Connection.ConnectionMode)">
+            <summary>
+            Overload - Returns a valid ServerConnection given the specified ConnectionMode
+            </summary>
+            <returns>An <see cref="T:ESRI.ArcGIS.ADF.Connection.IServerConnection"/> object.</returns>
+            <param name="connectionMode">
+            	<see cref="T:ESRI.ArcGIS.ADF.Connection.ConnectionMode">ConnectionMode</see>
+                (Default, Failover, RoundRobin).
+            </param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.WriteXml(System.Xml.XmlDocument)">
+            <summary>
+            Creates a XmlNode to be inserted into an XmlDocument with the current state of the type
+            </summary>
+            <param name="doc"><see cref="T:System.Xml.XmlDocument"/></param>
+            <returns><see cref="T:System.Xml.XmlNode"/></returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.ReadXml(System.Xml.XmlNode)">
+            <summary>
+            Populates the object using information found in the specified XmlNode
+            </summary>
+            <param name="node"><see cref="T:System.Xml.XmlNode"/></param>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.Connection.ServerConnectionFactory(System.String)">
+            <summary>
+            A factory for creating ServerConnections
+            </summary>
+            <param name="serverType">Type of server (e.g. ArcGIS, ArcIMS)</param>
+            <seealso cref="T:ESRI.ArcGIS.ADF.Connection.IServerConnection"/> 
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.Connection.ServerType">
+            <summary>Type of Server that this connection is for (e.g. ArcGIS, ArcIMS).</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.Connection.Items">
+            <summary>
+            Connection items associated with this connection
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.Connection.ActiveConnectionItemIndex">
+            <summary>
+            For ConnectionMode.RoundRobin, the currently active index of the Connection item.
+            -1 is the default connection.
+            0-n is the server item entry index of the associated Items
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.Connection.Name">
+            <summary>
+            The ArcGIS Server Object Manager machine name.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.Connection.FailedCheckInterval">
+            <summary>
+            Interval number used to check between failed connection attempts. This # is per
+            application request.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.Connection.ConnectionMode">
+            <summary>
+                The type of connection, in
+                <see cref="T:ESRI.ArcGIS.ADF.Connection.ConnectionMode">ConnectionMode</see>
+                (Default, Failover, RoundRobin).
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.Connection.Identity">
+            <summary>
+            Identity used to connect to the data source, containing the username, domain,
+            password.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.RecoveryFailedException">
+            <summary>
+            Exception thrown when the recovery of a connection fails.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.RecoveryFailedException.#ctor">
+            <summary>
+            Overloaded. Initializes a new instance of the RecoveryFailedException class.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.RecoveryFailedException.#ctor(System.String)">
+            <summary>
+            Overloaded. Initializes a new instance of the RecoveryFailedException class.
+            </summary>
+            <param name="host">Name of Server Host that failed.</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.RecoveryFailedException.Message">
+            <summary>
+            Gets a message that describes the current exception.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ADF.Connection.EmptyServerListException">
+            <summary>
+            Exception thrown when the server list is empty.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.EmptyServerListException.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ADF.Connection.EmptyServerListException.#ctor(System.String,ESRI.ArcGIS.ADF.Connection.ConnectionMode)">
+            <summary>
+            Constructor taking host and connection mode.
+            </summary>
+            <param name="host">The host in the requested connection.</param>
+            <param name="connectionMode">The connection mode (Default, Failover or RoundRobin).</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ADF.Connection.EmptyServerListException.Message">
+            <summary>
+            The message describing the empty server list exception.
+            </summary>
+        </member>
+    </members>
+</doc>

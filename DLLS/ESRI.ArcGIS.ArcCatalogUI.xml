@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.ArcCatalogUI</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.ArcCatalogUI.esriGxDlgIDs">
+      <summary>The Esri ArcCatalog dialog identifiers.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcCatalogUI.esriGxDlgIDs.esriGxDlgCustomize">
+      <summary>Customize Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcCatalogUI.esriGxDlgIDs.esriGxDlgCatalogTree">
+      <summary>Tree docking window.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcCatalogUI.esriGxDlgIDs.esriGxDlgMacros">
+      <summary>Macros Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcCatalogUI.esriGxDlgIDs.esriGxDlgVBA">
+      <summary>VBA Dialog.</summary>
+    </member>
+  </members>
+</doc>

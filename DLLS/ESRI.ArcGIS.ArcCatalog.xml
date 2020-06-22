@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.ArcCatalog</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents">
+      <summary>Provides access to events fired by ArcCatalog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event">
+      <summary>Provides access to events fired by ArcCatalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents.OnContextMenu(System.Int32,System.Int32)">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp">
+      <summary>Provides access to events fired by ArcCatalog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event">
+      <summary>Provides access to events fired by ArcCatalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp.OnContextMenu(System.Int32,System.Int32)">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event.OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp.VBAReset">
+      <summary>Fired when VBA is reset.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event.VBAReset">
+      <summary>Fired when VBA is reset.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.Application">
+      <summary>Esri ArcCatalog Application.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.ApplicationClass">
+      <summary>Esri ArcCatalog Application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.AreaOfInterest">
+      <summary>The default area of interest for the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_AreaOfInterest">
+      <summary>The default area of interest for the application.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.ArcCatalog..">
+      <summary>Esri ArcCatalog Application. Constructor has no input arguments.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.ArcCatalog.._">
+      <summary>Esri ArcCatalog Application. Constructor has no input arguments.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.#ctor">
+      <summary>Esri ArcCatalog Application. Constructor has no input arguments.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.CanDeleteSelection">
+      <summary>Indicates if the current selection can be deleted.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_CanDeleteSelection">
+      <summary>Indicates if the current selection can be deleted.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.CanRenameSelection">
+      <summary>Indicates if the current selection can be renamed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_CanRenameSelection">
+      <summary>Indicates if the current selection can be renamed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Catalog">
+      <summary>The current catalog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_Catalog">
+      <summary>The current catalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.DeleteSelection">
+      <summary>Deletes the current selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_DeleteSelection">
+      <summary>Deletes the current selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.ExpandSelection">
+      <summary>Expands the current selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_ExpandSelection">
+      <summary>Expands the current selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Location">
+      <summary>The location to the specified path.  If the path isn't yet part of the catalog, it is added as a folder connection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_Location">
+      <summary>The location to the specified path.  If the path isn't yet part of the catalog, it is added as a folder connection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Refresh(System.String)">
+      <summary>Refreshes the catalog tree starting at the specified path.  If startingPath is 0 or the empty string, the entire catalog is refreshed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_Refresh(System.String)">
+      <summary>Refreshes the catalog tree starting at the specified path.  If startingPath is 0 or the empty string, the entire catalog is refreshed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.RenameSelection">
+      <summary>Renames the current selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_RenameSelection">
+      <summary>Renames the current selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.SelectedObject">
+      <summary>The first selected object, or the location if no objects are selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_SelectedObject">
+      <summary>The first selected object, or the location if no objects are selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Selection">
+      <summary>The selection of application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_Selection">
+      <summary>The selection of application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.ShowContextMenu(System.Int32,System.Int32)">
+      <summary>Displays a context menu for the current selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_ShowContextMenu(System.Int32,System.Int32)">
+      <summary>Displays a context menu for the current selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.TreeView">
+      <summary>The tree view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_TreeView">
+      <summary>The tree view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.View">
+      <summary>The current view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_View">
+      <summary>The current view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.ViewClassID">
+      <summary>The current view's class ID.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxApplication_ViewClassID">
+      <summary>The current view's class ID.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.FindView(ESRI.ArcGIS.esriSystem.IUID,System.Boolean)">
+      <summary>Finds a view by CLSID. If recursive is true, it will return views in a container view.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxViewContainer_FindView(ESRI.ArcGIS.esriSystem.IUID,System.Boolean)">
+      <summary>Finds a view by CLSID. If recursive is true, it will return views in a container view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Views">
+      <summary>All Gxviews in the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IGxViewContainer_Views">
+      <summary>All Gxviews in the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Caption">
+      <summary>The caption of this application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_Caption">
+      <summary>The caption of this application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.CurrentTool">
+      <summary>The currently selected tool.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_CurrentTool">
+      <summary>The currently selected tool.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Document">
+      <summary>The document that is currently loaded in the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_Document">
+      <summary>The document that is currently loaded in the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.FindExtensionByCLSID(ESRI.ArcGIS.esriSystem.IUID)">
+      <summary>Finds an extension by its CLSID.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_FindExtensionByCLSID(ESRI.ArcGIS.esriSystem.IUID)">
+      <summary>Finds an extension by its CLSID.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.FindExtensionByName(System.String)">
+      <summary>Finds an extension by its name.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_FindExtensionByName(System.String)">
+      <summary>Finds an extension by its name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.hWnd">
+      <summary>The handle of the application's window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_hWnd">
+      <summary>The handle of the application's window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IsDialogVisible(System.Int32)">
+      <summary>Indicates if the specified dialog is visible in the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_IsDialogVisible(System.Int32)">
+      <summary>Indicates if the specified dialog is visible in the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.LockCustomization(System.String,ESRI.ArcGIS.Framework.ICustomizationFilter)">
+      <summary>Locks the application's user interface against any customizations.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_LockCustomization(System.String,ESRI.ArcGIS.Framework.ICustomizationFilter)">
+      <summary>Locks the application's user interface against any customizations.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Name">
+      <summary>The name of this application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_Name">
+      <summary>The name of this application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.NewDocument(System.Boolean,System.String)">
+      <summary>Creates a new document in this application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_NewDocument(System.Boolean,System.String)">
+      <summary>Creates a new document in this application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.OpenDocument(System.String)">
+      <summary>Opens a document in this application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_OpenDocument(System.String)">
+      <summary>Opens a document in this application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.PrintDocument">
+      <summary>Displays the Print dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_PrintDocument">
+      <summary>Displays the Print dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.PrintPreview">
+      <summary>Displays how the document will look like when it is printed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_PrintPreview">
+      <summary>Displays how the document will look like when it is printed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.RefreshWindow">
+      <summary>Redraws the application window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_RefreshWindow">
+      <summary>Redraws the application window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.SaveAsDocument(System.String,System.Boolean)">
+      <summary>Saves the document that is currently open in this application to a different file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_SaveAsDocument(System.String,System.Boolean)">
+      <summary>Saves the document that is currently open in this application to a different file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.SaveDocument(System.String)">
+      <summary>Saves the document that is currently open in this application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_SaveDocument(System.String)">
+      <summary>Saves the document that is currently open in this application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.ShowDialog(System.Int32,System.Object@)">
+      <summary>Displays the specified dialog in the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_ShowDialog(System.Int32,System.Object@)">
+      <summary>Displays the specified dialog in the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Shutdown">
+      <summary>Terminates the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_Shutdown">
+      <summary>Terminates the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.StatusBar">
+      <summary>The statusbar of this application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_StatusBar">
+      <summary>The statusbar of this application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Templates">
+      <summary>The templates collection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_Templates">
+      <summary>The templates collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.UnlockCustomization(System.String)">
+      <summary>Unlocks previous user interface customization lock.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_UnlockCustomization(System.String)">
+      <summary>Unlocks previous user interface customization lock.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.VBE">
+      <summary>The Visual Basic Environment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_VBE">
+      <summary>The Visual Basic Environment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Visible">
+      <summary>Indicates if the application window is visible.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplication_Visible">
+      <summary>Indicates if the application window is visible.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Initialized">
+      <summary>Is the application initialized.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplicationStatus_Initialized">
+      <summary>Is the application initialized.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Initialized">
+      <summary>Fired when the application UI is initialized.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplicationStatusEvents_Initialized">
+      <summary>Fired when the application UI is initialized.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplicationStatusEvents_Event_Initialized">
+      <summary>Fired when the application UI is initialized.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IApplicationStatusEvents_Event.Initialized">
+      <summary>Fired when the application UI is initialized.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IApplicationStatusEvents_Event.Initialized">
+      <summary>Fired when the application UI is initialized.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IApplicationStatusEvents_InitializedEventHandler">
+      <summary>Handles the IApplicationStatusEvents_Event.Initialized Event</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IApplicationStatusEvents_Event">
+      <summary>Provides access to events fired by application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.GetDockableWindow(ESRI.ArcGIS.esriSystem.IUID)">
+      <summary>Finds a dockable window looking first in the collection and then in the category.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IDockableWindowManager_GetDockableWindow(ESRI.ArcGIS.esriSystem.IUID)">
+      <summary>Finds a dockable window looking first in the collection and then in the category.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.GetProcessID">
+      <summary>The process ID for the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IMultiThreadedApplication_GetProcessID">
+      <summary>The process ID for the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.RegisterThreadManager(ESRI.ArcGIS.Framework.IDllThreadManager)">
+      <summary>Registers a DLL thread manager with the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IMultiThreadedApplication_RegisterThreadManager(ESRI.ArcGIS.Framework.IDllThreadManager)">
+      <summary>Registers a DLL thread manager with the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.UnregisterThreadManager(System.Int32)">
+      <summary>Unregisters a DLL thread manager with the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IMultiThreadedApplication_UnregisterThreadManager(System.Int32)">
+      <summary>Unregisters a DLL thread manager with the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.CreateCodeModule(System.String,System.String)">
+      <summary>Creates a code module in the specified VBA project.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IVbaApplication_CreateCodeModule(System.String,System.String)">
+      <summary>Creates a code module in the specified VBA project.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.InsertCode(System.String,System.String,System.String)">
+      <summary>Inserts code into the specified module.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IVbaApplication_InsertCode(System.String,System.String,System.String)">
+      <summary>Inserts code into the specified module.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.RemoveCodeModule(System.String,System.String)">
+      <summary>Removes a code module from the specified VBA project.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IVbaApplication_RemoveCodeModule(System.String,System.String)">
+      <summary>Removes a code module from the specified VBA project.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.RunVBAMacro(System.String,System.String,System.String,System.Object@)">
+      <summary>Runs the specified VBA macro.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IVbaApplication_RunVBAMacro(System.String,System.String,System.String,System.Object@)">
+      <summary>Runs the specified VBA macro.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Height">
+      <summary>The height of the window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IWindowPosition_Height">
+      <summary>The height of the window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Left">
+      <summary>The distance between the internal left edge of the window and screen.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IWindowPosition_Left">
+      <summary>The distance between the internal left edge of the window and screen.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Move(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Moves and optionally resizes the windows in a single function.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IWindowPosition_Move(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Moves and optionally resizes the windows in a single function.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.State">
+      <summary>The state of the window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IWindowPosition_State">
+      <summary>The state of the window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Top">
+      <summary>The distance between the internal top edge of the window and screen.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IWindowPosition_Top">
+      <summary>The distance between the internal top edge of the window and screen.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Width">
+      <summary>The width of the window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IWindowPosition_Width">
+      <summary>The width of the window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.Extension(System.Int32)">
+      <summary>The extension at the specified index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IExtensionManager_Extension(System.Int32)">
+      <summary>The extension at the specified index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.ExtensionCLSID(System.Int32)">
+      <summary>The CLSID of the extension at the specified index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IExtensionManager_ExtensionCLSID(System.Int32)">
+      <summary>The CLSID of the extension at the specified index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.ExtensionCount">
+      <summary>The number of extensions loaded in the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IExtensionManager_ExtensionCount">
+      <summary>The number of extensions loaded in the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.FindExtension(System.Object)">
+      <summary>Finds the extension by CLSID (IUID) or name (String).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.ApplicationClass.IExtensionManager_FindExtension(System.Object)">
+      <summary>Finds the extension by CLSID (IUID) or name (String).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.GxDocument">
+      <summary>Esri ArcCatalog Application Document.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.GxDocumentClass">
+      <summary>Esri ArcCatalog Application Document.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_Event_ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_Event.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.ArcCatalog..">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.ArcCatalog.._">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_ActiveViewChangedEventHandler">
+      <summary>Handles the IGxDocumentEvents_Event.ActiveViewChanged Event</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event">
+      <summary>Provides access to events fired by ArcCatalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.#ctor">
+      <summary>Esri ArcCatalog Application Document. Constructor has no input arguments.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_Event_CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_Event.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_CloseDocumentEventHandler">
+      <summary>Handles the IGxDocumentEvents_Event.CloseDocument Event</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_Event_NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_Event.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_NewDocumentEventHandler">
+      <summary>Handles the IGxDocumentEvents_Event.NewDocument Event</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_Event_OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_Event.OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_OnContextMenuEventHandler">
+      <summary>Handles the IGxDocumentEvents_Event.OnContextMenu Event</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_Event_OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEvents_Event.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_OpenDocumentEventHandler">
+      <summary>Handles the IGxDocumentEvents_Event.OpenDocument Event</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_Event_ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_Event.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_ActiveViewChangedEventHandler">
+      <summary>Handles the IGxDocumentEventsDisp_Event.ActiveViewChanged Event</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event">
+      <summary>Provides access to events fired by ArcCatalog.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_Event_CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_Event.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_CloseDocumentEventHandler">
+      <summary>Handles the IGxDocumentEventsDisp_Event.CloseDocument Event</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_Event_NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_Event.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_NewDocumentEventHandler">
+      <summary>Handles the IGxDocumentEventsDisp_Event.NewDocument Event</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_Event_OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_Event.OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event.OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_OnContextMenuEventHandler">
+      <summary>Handles the IGxDocumentEventsDisp_Event.OnContextMenu Event</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_Event_OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_Event.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_OpenDocumentEventHandler">
+      <summary>Handles the IGxDocumentEventsDisp_Event.OpenDocument Event</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.VBAReset">
+      <summary>Fired when VBA is reset.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_VBAReset">
+      <summary>Fired when VBA is reset.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_Event_VBAReset">
+      <summary>Fired when VBA is reset.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IGxDocumentEventsDisp_Event.VBAReset">
+      <summary>Fired when VBA is reset.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_Event.VBAReset">
+      <summary>Fired when VBA is reset.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEventsDisp_VBAResetEventHandler">
+      <summary>Handles the IGxDocumentEventsDisp_Event.VBAReset Event</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.Accelerators">
+      <summary>The accelerator table for this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IDocument_Accelerators">
+      <summary>The accelerator table for this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.CommandBars">
+      <summary>The commandbars collection in this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IDocument_CommandBars">
+      <summary>The commandbars collection in this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.ID">
+      <summary>The unique id for this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IDocument_ID">
+      <summary>The unique id for this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.Parent">
+      <summary>The application in which this document is open.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IDocument_Parent">
+      <summary>The application in which this document is open.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.Title">
+      <summary>The title of this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IDocument_Title">
+      <summary>The title of this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.Type">
+      <summary>The type of this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IDocument_Type">
+      <summary>The type of this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.VBProject">
+      <summary>The VBProject for this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcCatalog.GxDocumentClass.IDocument_VBProject">
+      <summary>The VBProject for this document.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.GxDocumentEvents">
+      <summary>Helper coclass for working with the nondefault outbound IGxDocumentEvents interface in VB.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass">
+      <summary>Helper coclass for working with the nondefault outbound IGxDocumentEvents interface in VB.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_Event_ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_Event.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.ArcCatalog..">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.ArcCatalog.._">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_ActiveViewChangedEventHandler">
+      <summary>Handles the IGxDocumentEvents_Event.ActiveViewChanged Event</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event">
+      <summary>Provides access to events fired by ArcCatalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.#ctor">
+      <summary>Helper coclass for working with the nondefault outbound IGxDocumentEvents interface in VB. Constructor has no input arguments.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_Event_CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_Event.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_CloseDocumentEventHandler">
+      <summary>Handles the IGxDocumentEvents_Event.CloseDocument Event</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_Event_NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_Event.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_NewDocumentEventHandler">
+      <summary>Handles the IGxDocumentEvents_Event.NewDocument Event</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_Event_OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_Event.OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.OnContextMenu">
+      <summary>Fired when a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_OnContextMenuEventHandler">
+      <summary>Handles the IGxDocumentEvents_Event.OnContextMenu Event</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_Event_OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.GxDocumentEventsClass.IGxDocumentEvents_Event.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_Event.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcCatalog.IGxDocumentEvents_OpenDocumentEventHandler">
+      <summary>Handles the IGxDocumentEvents_Event.OpenDocument Event</summary>
+    </member>
+  </members>
+</doc>

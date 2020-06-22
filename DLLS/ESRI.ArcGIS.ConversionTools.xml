@@ -1,0 +1,2115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ESRI.ArcGIS.ConversionTools</name>
+    </assembly>
+    <members>
+        <member name="T:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation">
+            <summary>Converts a collection of coverage annotation features to geodatabase annotation. You can convert each level to individual annotation classes or merge them into a single class. Also, if you choose map layers as input, the level and font overrides will be honored.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.#ctor(System.Object,System.Object,System.Double)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="input_features">The coverage annotation features that you want to convert to geodatabase annotation. If you choose a coverage annotation layer in ArcMap, the following properties of that layer will be honored during the conversion: (In, Required)</param>
+            <param name="output_featureclass">Browse into an existing geodatabase and type in the name of the new annotation feature class to create. (Out, Required)</param>
+            <param name="reference_scale">Enter the scale to use as a reference for the annotation. This sets the scale to which all symbol and text sizes in the annotation will be based. (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.input_features">
+            <summary>The coverage annotation features that you want to convert to geodatabase annotation. If you choose a coverage annotation layer in ArcMap, the following properties of that layer will be honored during the conversion: (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.output_featureclass">
+            <summary>Browse into an existing geodatabase and type in the name of the new annotation feature class to create. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.reference_scale">
+            <summary>Enter the scale to use as a reference for the annotation. This sets the scale to which all symbol and text sizes in the annotation will be based. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.use_levels">
+            <summary>This parameter is only available with ArcGIS for Desktop Standard and ArcGIS for Desktop Advanced licenses.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.match_symbols_from_first_input">
+            <summary>If you are converting coverage annotation from more than one coverage or annotation subclass and need to substitute the font properties for a symbol and apply them to all the input features, you can use this option.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.require_symbol_from_table">
+            <summary>Specify whether the output annotation features must reference a symbol stored in the symbol collection for the feature class.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.feature_linked">
+            <summary>This parameter is only available with ArcGIS for Desktop Standard and ArcGIS for Desktop Advanced licenses.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.linked_feature_class">
+            <summary>This parameter is only available with ArcGIS for Desktop Standard and ArcGIS for Desktop Advanced licenses. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.create_annotation_when_feature_added">
+            <summary>This parameter is only available with ArcGIS for Desktop Standard and ArcGIS for Desktop Advanced licenses.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.update_annotation_when_feature_modified">
+            <summary>This parameter is only available with ArcGIS for Desktop Standard and ArcGIS for Desktop Advanced licenses.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCoverageAnnotation.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation">
+            <summary>Converts a collection of CAD annotation features to geodatabase annotation. You can convert each level to individual annotation classes or merge them into a single class. Also, if you choose map layers as input, the level and font overrides will be honored.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.#ctor(System.Object,System.Object,System.Double)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="input_features">The CAD annotation features that you want to convert to geodatabase annotation. If you choose a CAD annotation layer in ArcMap, the following properties of that layer will be honored during the conversion: (In, Required)</param>
+            <param name="output_featureclass">The geodatabase annotation feature class to which you want to convert CAD annotation. (Out, Required)</param>
+            <param name="reference_scale">Enter the scale to use as a reference for the annotation. This sets the scale to which all symbol and text sizes in the annotation will be made relative. (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.input_features">
+            <summary>The CAD annotation features that you want to convert to geodatabase annotation. If you choose a CAD annotation layer in ArcMap, the following properties of that layer will be honored during the conversion: (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.output_featureclass">
+            <summary>The geodatabase annotation feature class to which you want to convert CAD annotation. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.reference_scale">
+            <summary>Enter the scale to use as a reference for the annotation. This sets the scale to which all symbol and text sizes in the annotation will be made relative. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.use_levels">
+            <summary>This parameter is only available with ArcGIS for Desktop Standard and ArcGIS for Desktop Advanced licenses.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.match_symbols_from_first_input">
+            <summary>If you are converting CAD annotation from more than one drawing file and need to substitute the font properties for a symbol and apply that to all the input features, you can use this option.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.require_symbol_from_table">
+            <summary>Specify if the output annotation features will reference a symbol stored in the symbol collection for the feature class.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.feature_linked">
+            <summary>This parameter is only available with ArcGIS for Desktop Standard and ArcGIS for Desktop Advanced licenses.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.linked_feature_class">
+            <summary>This parameter is only available with ArcGIS for Desktop Standard and ArcGIS for Desktop Advanced licenses. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.create_annotation_when_feature_added">
+            <summary>This parameter is only available with ArcGIS for Desktop Standard and ArcGIS for Desktop Advanced licenses.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.update_annotation_when_feature_modified">
+            <summary>This parameter is only available with ArcGIS for Desktop Standard and ArcGIS for Desktop Advanced licenses.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportCADAnnotation.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.RasterToASCII">
+            <summary>Converts a raster dataset to an ASCII text file representing raster data.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.RasterToASCII.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="in_raster">The input raster dataset. (In, Required)</param>
+            <param name="out_ascii_file">The output ASCII raster file. (Out, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToASCII.in_raster">
+            <summary>The input raster dataset. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToASCII.out_ascii_file">
+            <summary>The output ASCII raster file. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToASCII.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToASCII.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToASCII.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToASCII.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToASCII.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.RasterToFloat">
+            <summary>Converts a raster dataset to a file of binary floating-point values representing raster data.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.RasterToFloat.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="in_raster">The input raster dataset. (In, Required)</param>
+            <param name="out_float_file">The output floating-point raster file. (Out, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToFloat.in_raster">
+            <summary>The input raster dataset. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToFloat.out_float_file">
+            <summary>The output floating-point raster file. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToFloat.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToFloat.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToFloat.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToFloat.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToFloat.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.RasterToPoint">
+            <summary>Converts a raster dataset to point features.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.RasterToPoint.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="in_raster">The input raster dataset. (In, Required)</param>
+            <param name="out_point_features">The output feature class that will contain the converted points. (Out, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPoint.in_raster">
+            <summary>The input raster dataset. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPoint.out_point_features">
+            <summary>The output feature class that will contain the converted points. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPoint.raster_field">
+            <summary>The field to assign values from the cells in the input raster to the points in the output dataset. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPoint.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPoint.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPoint.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPoint.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPoint.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.RasterToPolygon">
+            <summary>Converts a raster dataset to polygon features.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.RasterToPolygon.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="in_raster">The input raster dataset. (In, Required)</param>
+            <param name="out_polygon_features">The output feature class that will contain the converted polygons. (Out, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolygon.in_raster">
+            <summary>The input raster dataset. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolygon.out_polygon_features">
+            <summary>The output feature class that will contain the converted polygons. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolygon.simplify">
+            <summary>Determines if the output polygons will be smoothed into simpler shapes or conform to the input raster's cell edges.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolygon.raster_field">
+            <summary>The field used to assign values from the cells in the input raster to the polygons in the output dataset. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolygon.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolygon.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolygon.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolygon.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolygon.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.RasterToPolyline">
+            <summary>Converts a raster dataset to polyline features.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.RasterToPolyline.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="in_raster">The input raster dataset. (In, Required)</param>
+            <param name="out_polyline_features">The output feature class that will contain the converted polylines. (Out, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolyline.in_raster">
+            <summary>The input raster dataset. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolyline.out_polyline_features">
+            <summary>The output feature class that will contain the converted polylines. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolyline.background_value">
+            <summary>Specifies the value that will identify the background cells. The raster dataset is viewed as a set of foreground cells and background cells. The linear features are formed from the foreground cells. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolyline.minimum_dangle_length">
+            <summary>Minimum length of dangling polylines that will be retained. The default is zero. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolyline.simplify">
+            <summary>Simplifies a line by removing small fluctuations or extraneous bends from it while preserving its essential shape.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolyline.raster_field">
+            <summary>The field used to assign values from the cells in the input raster to the polyline features in the output dataset. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolyline.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolyline.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolyline.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolyline.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToPolyline.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.FeatureClassToGeodatabase">
+            <summary>Geoprocessing tool used to convert one or more feature classes or feature layers to geodatabase feature classes</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.FeatureClassToGeodatabase.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Input_Features">Input Features (in)</param>
+            <param name="Output_Geodatabase">Output Geodatabase (in)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToGeodatabase.Input_Features">
+            <summary>Input Features (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToGeodatabase.Output_Geodatabase">
+            <summary>Output Geodatabase (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToGeodatabase.Derived_Geodatabase">
+            <summary>Derived Geodatabase (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToGeodatabase.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToGeodatabase.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToGeodatabase.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToGeodatabase.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToGeodatabase.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.RasterToGeodatabase">
+            <summary>Geoprocessing tool that loads multiple raster datasets into a geodatabase or raster catalog.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.RasterToGeodatabase.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Input_Rasters">Input Rasters (in)</param>
+            <param name="Output_Geodatabase">Output Geodatabase (in)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToGeodatabase.Input_Rasters">
+            <summary>Input Rasters (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToGeodatabase.Output_Geodatabase">
+            <summary>Output Geodatabase (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToGeodatabase.Configuration_Keyword">
+            <summary>Configuration Keyword (in, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToGeodatabase.Derived_Geodatabase">
+            <summary>Derived Geodatabase (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToGeodatabase.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToGeodatabase.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToGeodatabase.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToGeodatabase.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToGeodatabase.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.TableToGeodatabase">
+            <summary>Geoprocessing tool that converts one or more tables to geodatabase tables in an output file, personal, or SDE geodatabase.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.TableToGeodatabase.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Input_Table">Input Table (in)</param>
+            <param name="Output_Geodatabase">Output Geodatabase (in)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToGeodatabase.Input_Table">
+            <summary>Input Table (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToGeodatabase.Output_Geodatabase">
+            <summary>Output Geodatabase (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToGeodatabase.Derived_Geodatabase">
+            <summary>Derived Geodatabase (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToGeodatabase.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToGeodatabase.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToGeodatabase.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToGeodatabase.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToGeodatabase.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.ASCIIToRaster">
+            <summary>Converts an ASCII file representing raster data to a raster dataset.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.ASCIIToRaster.#ctor(System.Object,System.Object)">
+             <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+             <param name="in_ascii_file">The input ASCII file to be converted. (In, Required)</param>
+             <param name="out_raster"><summary>
+            The output raster dataset to be created. (Out, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ASCIIToRaster.in_ascii_file">
+            <summary>The input ASCII file to be converted. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ASCIIToRaster.out_raster">
+             <summary>
+            The output raster dataset to be created. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ASCIIToRaster.data_type">
+            <summary>The data type of the output raster dataset. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ASCIIToRaster.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ASCIIToRaster.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ASCIIToRaster.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ASCIIToRaster.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ASCIIToRaster.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.DEMToRaster">
+            <summary>Converts a digital elevation model (DEM) in a United States Geological Survey (USGS) format to a raster dataset.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.DEMToRaster.#ctor(System.Object,System.Object)">
+             <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+             <param name="in_dem_file">The input USGS DEM file. The DEM must be standard USGS 7.5 minute, 1 degree, or any other file in the USGS DEM format. The DEM may be in either fixed or variable record-length format. (In, Required)</param>
+             <param name="out_raster"><summary>
+            The output raster dataset to be created. (Out, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.DEMToRaster.in_dem_file">
+            <summary>The input USGS DEM file. The DEM must be standard USGS 7.5 minute, 1 degree, or any other file in the USGS DEM format. The DEM may be in either fixed or variable record-length format. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.DEMToRaster.out_raster">
+             <summary>
+            The output raster dataset to be created. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.DEMToRaster.data_type">
+            <summary>Data type of the output raster dataset. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.DEMToRaster.z_factor">
+            <summary>The number of ground x,y units in one surface z unit. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.DEMToRaster.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.DEMToRaster.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.DEMToRaster.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.DEMToRaster.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.DEMToRaster.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.FeatureToRaster">
+            <summary>Converts features to a raster dataset.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.FeatureToRaster.#ctor(System.Object,System.Object,System.Object)">
+             <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+             <param name="in_features">The input feature dataset to be converted to a raster dataset. (In, Required)</param>
+             <param name="field"><summary>
+            The field used to assign values to the output raster. (In, Required)</summary></param>
+             <param name="out_raster"><summary>
+            The output raster dataset to be created. (Out, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureToRaster.in_features">
+            <summary>The input feature dataset to be converted to a raster dataset. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureToRaster.field">
+             <summary>
+            The field used to assign values to the output raster. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureToRaster.out_raster">
+             <summary>
+            The output raster dataset to be created. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureToRaster.cell_size">
+             <summary>
+            The cell size for the output raster dataset. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureToRaster.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureToRaster.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureToRaster.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureToRaster.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureToRaster.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.FloatToRaster">
+            <summary>Converts a file of binary floating-point values representing raster data to a raster dataset.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.FloatToRaster.#ctor(System.Object,System.Object)">
+             <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+             <param name="in_float_file">The input floating-point binary file. (In, Required)</param>
+             <param name="out_raster"><summary>
+            The output raster dataset to be created. (Out, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FloatToRaster.in_float_file">
+            <summary>The input floating-point binary file. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FloatToRaster.out_raster">
+             <summary>
+            The output raster dataset to be created. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FloatToRaster.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FloatToRaster.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FloatToRaster.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FloatToRaster.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FloatToRaster.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.FeatureClassToShapefile">
+            <summary>Geoprocessing tool that converts the features from one or more feature classes or layers to a folder of shapefiles.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.FeatureClassToShapefile.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Input_Features">Input Features (in)</param>
+            <param name="Output_Folder">Output Folder (in)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToShapefile.Input_Features">
+            <summary>Input Features (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToShapefile.Output_Folder">
+            <summary>Output Folder (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToShapefile.Derived_Folder">
+            <summary>Derived Folder (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToShapefile.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToShapefile.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToShapefile.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToShapefile.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToShapefile.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.TableToDBASE">
+            <summary>Geoprocessing tool that converts one or more tables to dBASE tables in an output folder.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.TableToDBASE.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Input_Table">Input Table (in)</param>
+            <param name="Output_Folder">Output Folder (in)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToDBASE.Input_Table">
+            <summary>Input Table (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToDBASE.Output_Folder">
+            <summary>Output Folder (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToDBASE.Derived_Folder">
+            <summary>Derived Folder (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToDBASE.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToDBASE.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToDBASE.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToDBASE.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToDBASE.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.FeatureclassToCoverage">
+            <summary>Creates a single ArcInfo Workstation coverage from one or more input feature classes or layers.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.FeatureclassToCoverage.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="in_features">The input feature classes or layers used to create a single ArcInfo Workstation coverage, including the type of features of which the coverage will be composed. (In, Required)</param>
+            <param name="out_cover">The output coverage to be created. (Out, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureclassToCoverage.in_features">
+            <summary>The input feature classes or layers used to create a single ArcInfo Workstation coverage, including the type of features of which the coverage will be composed. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureclassToCoverage.out_cover">
+            <summary>The output coverage to be created. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureclassToCoverage.cluster_tolerance">
+            <summary>The minimum distance separating all feature coordinates (nodes and vertices) as well as the distance a coordinate can move in X or Y (or both). You can set the value to be higher for data that has less coordinate accuracy and lower for datasets with extremely high accuracy. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureclassToCoverage.precision">
+            <summary>The precision of the output coverage.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureclassToCoverage.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureclassToCoverage.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureclassToCoverage.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureclassToCoverage.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureclassToCoverage.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass">
+            <summary>Converts a shapefile, coverage feature class, or geodatabase feature class to a shapefile or geodatabase feature class.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass.#ctor(System.Object,System.Object,System.String)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="in_features">The feature class or feature layer that will be converted. (In, Required)</param>
+            <param name="out_path">The location in which the output feature class will be created. This can be either a geodatabase or a folder. If the output location is a folder, the output will be a shapefile. (In, Required)</param>
+            <param name="out_name">The name of the output feature class. (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass.in_features">
+            <summary>The feature class or feature layer that will be converted. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass.out_path">
+            <summary>The location in which the output feature class will be created. This can be either a geodatabase or a folder. If the output location is a folder, the output will be a shapefile. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass.out_name">
+            <summary>The name of the output feature class. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass.where_clause">
+            <summary>An SQL expression used to select a subset of features.  For more information on SQL syntax  see the help topic SQL reference for query expressions used in ArcGIS. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass.field_mapping">
+            <summary>The fields and field contents chosen from the input feature class. You can add, rename, or delete output fields as well as set properties such as data type and merge rule.  (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass.config_keyword">
+            <summary>Specifies the storage parameters (configuration) for geodatabases in file and ArcSDE geodatabases. Personal geodatabases do not use configuration keywords. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass.out_feature_class">
+            <summary>Output Feature Class (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeatureClassToFeatureClass.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.TableToTable">
+            <summary>Converts an input table to a dBASE or geodatabase table.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.TableToTable.#ctor(System.Object,System.Object,System.String)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="in_rows">The input table to be converted to a new table.  (In, Required)</param>
+            <param name="out_path">The destination where the output table will be written. (In, Required)</param>
+            <param name="out_name">The name of the output table. (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToTable.in_rows">
+            <summary>The input table to be converted to a new table.  (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToTable.out_path">
+            <summary>The destination where the output table will be written. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToTable.out_name">
+            <summary>The name of the output table. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToTable.where_clause">
+            <summary>An SQL expression used to select a subset of records.  For more information on SQL syntax see the help topic SQL reference for query expressions used in ArcGIS. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToTable.field_mapping">
+            <summary>The fields and field contents chosen from the input table. You can add, rename, or delete output fields as well as set properties such as data type and merge rule.  (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToTable.config_keyword">
+            <summary>Specifies the default storage parameters (configurations) for geodatabases in a relational database management system (RDBMS). This setting is applicable only when using SDE geodatabase tables. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToTable.out_table">
+            <summary>Output Table (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToTable.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToTable.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToTable.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToTable.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToTable.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.ESRITranslator">
+            <summary>Uses the ArcGIS metadata translation engine or an XSLT transformation to export metadata content from ArcGIS to a stand-alone metadata XML file. The exported metadata will be formatted to satisfy the metadata standard associated with the specified translation. </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.ESRITranslator.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="source">The item whose metadata will be converted or a stand-alone XML file that will be converted. (In, Required)</param>
+            <param name="translator">An XML file that defines the conversion that will be performed.  (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ESRITranslator.source">
+            <summary>The item whose metadata will be converted or a stand-alone XML file that will be converted. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ESRITranslator.translator">
+            <summary>An XML file that defines the conversion that will be performed.  (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ESRITranslator.output">
+            <summary>A stand-alone XML file that will be created containing the converted metadata. (Out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ESRITranslator.logfile">
+            <summary>A text file that will be created listing the warnings and errors that occurred during the conversion process. (Out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ESRITranslator.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ESRITranslator.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ESRITranslator.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ESRITranslator.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ESRITranslator.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.USGSMPTranslator">
+            <summary>Uses the USGS metadata parser utility, known as mp, to export or validate FGDC metadata content. The mp utility is created and maintained by the USGS for managing metadata that follows the FGDC Content Standard for Digital Geospatial Metadata (CSDGM). A version of mp is provided with ArcGIS.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.USGSMPTranslator.#ctor(System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="source">The item whose metadata will be converted or a stand-alone XML file that will be converted. (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.USGSMPTranslator.source">
+            <summary>The item whose metadata will be converted or a stand-alone XML file that will be converted. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.USGSMPTranslator.config">
+            <summary>A file that defines custom parameters that mp will consider when processing the metadata. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.USGSMPTranslator.conversion">
+            <summary>The type of conversion that will take place. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.USGSMPTranslator.output">
+            <summary>A file that will be created containing the converted metadata.  (Out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.USGSMPTranslator.errors">
+            <summary>A text file that will be created listing the warnings and errors that occurred during the conversion process. (Out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.USGSMPTranslator.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.USGSMPTranslator.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.USGSMPTranslator.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.USGSMPTranslator.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.USGSMPTranslator.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.XSLTransform">
+            <summary>Uses the .NET 3.5 XML software to transform an ArcGIS item's metadata or any XML file using an XSLT 1.0 stylesheet and save the result to an XML file.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.XSLTransform.#ctor(System.Object,System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="source">The item whose metadata will be converted or a stand-alone XML file that will be converted. (In, Required)</param>
+            <param name="xslt">A W3C-compliant XSLT 1.0 stylesheet file that defines the transformation that will be performed.  (In, Required)</param>
+            <param name="output">A file that will be created containing the converted metadata.  (Out, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XSLTransform.source">
+            <summary>The item whose metadata will be converted or a stand-alone XML file that will be converted. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XSLTransform.xslt">
+            <summary>A W3C-compliant XSLT 1.0 stylesheet file that defines the transformation that will be performed.  (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XSLTransform.output">
+            <summary>A file that will be created containing the converted metadata.  (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XSLTransform.xsltparam">
+            <summary>An XML file or string that will be passed to the XSLT stylesheet.  (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XSLTransform.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XSLTransform.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XSLTransform.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XSLTransform.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XSLTransform.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.MDPublisher">
+            <summary>Publishes metadata to a metadata catalog such as an ArcIMS Metadata Service.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.MDPublisher.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="source">The item whose metadata will be published, or a stand-alone XML file that will be published. (In, Required)</param>
+            <param name="publisher">An XML file that defines how the metadata will be published. (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MDPublisher.source">
+            <summary>The item whose metadata will be published, or a stand-alone XML file that will be published. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MDPublisher.publisher">
+            <summary>An XML file that defines how the metadata will be published. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MDPublisher.url">
+            <summary>The URL of a Web Service that hosts the metadata catalog, if appropriate.  (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MDPublisher.service">
+            <summary>The name of the service to which you want to publish, if appropriate.  (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MDPublisher.user">
+            <summary>The name used to access the metadata catalog when publishing documents, if appropriate.  (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MDPublisher.password">
+            <summary>The password you used to access the metadata catalog when publishing documents, if appropriate. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MDPublisher.output">
+            <summary>Output Metadata (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MDPublisher.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MDPublisher.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MDPublisher.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MDPublisher.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MDPublisher.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.PointToRaster">
+            <summary>Converts point features to a raster dataset.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.PointToRaster.#ctor(System.Object,System.Object,System.Object)">
+             <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+             <param name="in_features">The point or multipoint input feature dataset to be converted to a raster. (In, Required)</param>
+             <param name="value_field"><summary>
+            The field used to assign values to the output raster. (In, Required)</summary></param>
+             <param name="out_rasterdataset"><summary>
+            The output raster dataset to be created. (Out, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PointToRaster.in_features">
+            <summary>The point or multipoint input feature dataset to be converted to a raster. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PointToRaster.value_field">
+             <summary>
+            The field used to assign values to the output raster. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PointToRaster.out_rasterdataset">
+             <summary>
+            The output raster dataset to be created. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PointToRaster.cell_assignment">
+            <summary>The method to determine how the cell will be assigned a value when more than one feature falls within a cell. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PointToRaster.priority_field">
+            <summary>This field is used when a feature should take preference over another feature with the same attribute. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PointToRaster.cellsize">
+             <summary>
+            The cell size for the output raster dataset. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PointToRaster.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PointToRaster.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PointToRaster.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PointToRaster.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PointToRaster.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.PolygonToRaster">
+            <summary>Converts polygon features to a raster dataset.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.PolygonToRaster.#ctor(System.Object,System.Object,System.Object)">
+             <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+             <param name="in_features">The polygon input feature dataset to be converted to a raster. (In, Required)</param>
+             <param name="value_field"><summary>
+            The field used to assign values to the output raster. (In, Required)</summary></param>
+             <param name="out_rasterdataset"><summary>
+            The output raster dataset to be created. (Out, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolygonToRaster.in_features">
+            <summary>The polygon input feature dataset to be converted to a raster. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolygonToRaster.value_field">
+             <summary>
+            The field used to assign values to the output raster. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolygonToRaster.out_rasterdataset">
+             <summary>
+            The output raster dataset to be created. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolygonToRaster.cell_assignment">
+            <summary>The method to determine how the cell will be assigned a value when more than one feature falls within a cell. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolygonToRaster.priority_field">
+            <summary>This field is used to determine which feature should take preference over another feature with the same value in the Value field. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolygonToRaster.cellsize">
+             <summary>
+            The cell size for the output raster dataset. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolygonToRaster.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolygonToRaster.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolygonToRaster.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolygonToRaster.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolygonToRaster.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.PolylineToRaster">
+            <summary>Converts polyline features to a raster dataset.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.PolylineToRaster.#ctor(System.Object,System.Object,System.Object)">
+             <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+             <param name="in_features">The polyline input feature dataset to be converted to a raster. (In, Required)</param>
+             <param name="value_field"><summary>
+            The field used to assign values to the output raster. (In, Required)</summary></param>
+             <param name="out_rasterdataset"><summary>
+            The output raster dataset to be created. (Out, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolylineToRaster.in_features">
+            <summary>The polyline input feature dataset to be converted to a raster. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolylineToRaster.value_field">
+             <summary>
+            The field used to assign values to the output raster. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolylineToRaster.out_rasterdataset">
+             <summary>
+            The output raster dataset to be created. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolylineToRaster.cell_assignment">
+            <summary>The method to determine how the cell will be assigned a value when more than one feature falls within a cell. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolylineToRaster.priority_field">
+            <summary>This field is used when a feature should take preference over another feature with the same attribute. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolylineToRaster.cellsize">
+             <summary>
+            The cell size for the output raster dataset. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolylineToRaster.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolylineToRaster.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolylineToRaster.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolylineToRaster.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.PolylineToRaster.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.MetadataImporter">
+            <summary>Copies metadata from the source item to the target item. Metadata is retrieved from the source item and transferred to the target item without changing it. The source and target may be ArcGIS items or stand-alone metadata XML files. </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.MetadataImporter.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="source">The item whose metadata will be imported or a stand-alone XML file that will be imported. (In, Required)</param>
+            <param name="target">The item to which the metadata will be imported or a stand-alone XML file that will be replaced. (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MetadataImporter.source">
+            <summary>The item whose metadata will be imported or a stand-alone XML file that will be imported. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MetadataImporter.target">
+            <summary>The item to which the metadata will be imported or a stand-alone XML file that will be replaced. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MetadataImporter.output">
+            <summary>Output Metadata (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MetadataImporter.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MetadataImporter.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MetadataImporter.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MetadataImporter.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MetadataImporter.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.LayerToKML">
+            <summary>This tool converts a feature or raster layer  into a KML file containing a translation of Esri geometries and symbology. This file is compressed using ZIP compression, has a .kmz extension, and can be read by any KML client including ArcGIS Explorer, ArcGlobe, and Google Earth.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.LayerToKML.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="layer">The  feature or raster layer  or layer file (.lyr) to be converted to KML. (In, Required)</param>
+            <param name="out_kmz_file">The KML file to write. This file is compressed and has a .kmz extension. It can be read by any KML client including ArcGIS Explorer, ArcGlobe, and Google Earth. (Out, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LayerToKML.layer">
+            <summary>The  feature or raster layer  or layer file (.lyr) to be converted to KML. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LayerToKML.out_kmz_file">
+            <summary>The KML file to write. This file is compressed and has a .kmz extension. It can be read by any KML client including ArcGIS Explorer, ArcGlobe, and Google Earth. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LayerToKML.layer_output_scale">
+            <summary>The scale at which to export the layer. This parameter is used with any scale dependency, such as  layer visibility or scale-dependent rendering. If the layer is not visible at the export scale, it will not be included in the created KML file. Any value, such as 0, can be used if there are no scale dependencies. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LayerToKML.is_composite">
+            <summary>Return single composite image (in, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LayerToKML.boundary_box_extent">
+            <summary> The geographic extent of the area to be exported. The extent rectangle bounds should be specified as a space-delimited string of WGS84 geographic coordinates in the form left lower right upper (xmin, ymin, xmax, ymax). (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LayerToKML.image_size">
+            <summary>Defines the vertical and horizontal resolution of any rasters in the output KML document. Use this parameter with the DPI parameter to control output image resolution. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LayerToKML.dpi_of_client">
+            <summary>Defines the device resolution for any rasters in the output KML document. Use this parameter with the Image Size parameter to control output image resolution. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LayerToKML.ignore_zvalue">
+            <summary>Clamped features to ground (in, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LayerToKML.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LayerToKML.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LayerToKML.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LayerToKML.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LayerToKML.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.MapToKML">
+            <summary>This tool converts a map document into a KML file containing a translation of Esri geometries and symbology. This file is compressed using ZIP compression, will have a .kmz extension, and can be read by any KML client including ArcGIS Explorer, ArcGlobe, and Google Earth.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.MapToKML.#ctor(System.Object,System.String,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="in_map_document">The map document to convert to KML. (In, Required)</param>
+            <param name="data_frame">The data frame of the map document to convert to KML. (In, Required)</param>
+            <param name="out_kmz_file">The KML file to write. This file is compressed and will have a .kmz extension. It can be read by any KML client including ArcGIS Explorer, ArcGlobe, and Google Earth. (Out, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.in_map_document">
+            <summary>The map document to convert to KML. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.data_frame">
+            <summary>The data frame of the map document to convert to KML. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.out_kmz_file">
+            <summary>The KML file to write. This file is compressed and will have a .kmz extension. It can be read by any KML client including ArcGIS Explorer, ArcGlobe, and Google Earth. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.map_output_scale">
+            <summary>The scale at which to export each layer in the map. This parameter is important with any scale dependency, such as  layer visibility or scale-dependent rendering. If the layer is not visible at the export scale, it will not be included in the created KML file. Any value, such as 1, can be used if there are no scale dependencies. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.is_composite">
+            <summary>Return single composite image (in, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.is_vector_to_raster">
+            <summary>Convert Vector to Raster (in, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.extent_to_export">
+            <summary>The geographic extent of the area to be exported. The extent rectangle bounds should be specified as a space-delimited string of WGS84 geographic coordinates in the form left lower right upper (xmin, ymin, xmax, ymax). (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.image_size">
+            <summary>Size of returned image in pixels. Defines the vertical and horizontal resolution of any rasters in the output KML document. Use this parameter with the DPI parameter to control output image resolution. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.dpi_of_client">
+            <summary>Defines the device resolution for any rasters in the output KML document. Typical screen resolution is 96 dpi. If the data inside your map supports a high resolution and your KML requires it, consider increasing the value. Use this parameter with the Image Size parameter to control output image resolution. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.ignore_zvalue">
+            <summary>Clamped features to ground (in, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MapToKML.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.AddCADFields">
+            <summary> Adds several reserved CAD fields in one step. Fields created by this tool are used by the Export To CAD tool to generate CAD entities with specific properties.   After executing this tool, you must calculate or type the appropriate field values.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.AddCADFields.#ctor(System.Object,System.String)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="input_table">Input table, feature class, or shapefile that will have the CAD-specific fields added to it (In, Required)</param>
+            <param name="Entities"><summary>Adds the list of CAD-specific Entity property fields to the input table
+            (In, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.AddCADFields.input_table">
+            <summary>Input table, feature class, or shapefile that will have the CAD-specific fields added to it (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.AddCADFields.Entities">
+            <summary>Adds the list of CAD-specific Entity property fields to the input table
+            (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.AddCADFields.LayerProps">
+            <summary>Adds the list of CAD-specific Layer property fields to the input table
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.AddCADFields.TextProps">
+            <summary>Adds the list of CAD-specific Text property fields to the input table
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.AddCADFields.DocProps">
+            <summary>Adds the list of CAD-specific Document property fields to the input table
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.AddCADFields.XDataProps">
+            <summary>Adds the list of CAD-specific XData property fields to the input table
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.AddCADFields.out_table">
+            <summary>Output Feature Class (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.AddCADFields.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.AddCADFields.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.AddCADFields.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.AddCADFields.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.AddCADFields.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.ExportCAD">
+            <summary>Creates one or more CAD drawings based on the values contained in one or more input feature classes or feature layers and supporting tables.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.ExportCAD.#ctor(System.Object,System.String,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="in_features">A collection of feature classes and/or feature layers whose geometry will be exported to one or more CAD files. (In, Required)</param>
+            <param name="Output_Type">The CAD platform and file version of the output files. This value overrides any output_type values contained in the keyname column or alias column CADFile_type. Types include DGN_V8, DWG_R14, DWG_R2000, DWG_R2004, DWG_R2005, DWG_R2007, DWG_R2010, DXF_R14, DXF_R2000, DXF_R2004, DXF_R2005,  DXF_R2007, and DXF_R2010. (In, Required)</param>
+            <param name="Output_File">The path of the desired output CAD drawing file. This name overrides any drawing name information included in the input features columns or alias columns named DrawingPathName. (Out, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportCAD.in_features">
+            <summary>A collection of feature classes and/or feature layers whose geometry will be exported to one or more CAD files. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportCAD.Output_Type">
+            <summary>The CAD platform and file version of the output files. This value overrides any output_type values contained in the keyname column or alias column CADFile_type. Types include DGN_V8, DWG_R14, DWG_R2000, DWG_R2004, DWG_R2005, DWG_R2007, DWG_R2010, DXF_R14, DXF_R2000, DXF_R2004, DXF_R2005,  DXF_R2007, and DXF_R2010. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportCAD.Output_File">
+            <summary>The path of the desired output CAD drawing file. This name overrides any drawing name information included in the input features columns or alias columns named DrawingPathName. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportCAD.Ignore_FileNames">
+            <summary>Allows the function to ignore or use the paths in the DrawingPathName. This allows the function to output CAD entities to specific drawings or ignore this and add to one CAD file.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportCAD.Append_To_Existing">
+            <summary>Allows the output to append to an existing CAD file. This lets you add information to a CAD file on disk.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportCAD.Seed_File">
+            <summary>An existing CAD drawing whose contents and document and layer properties will be used for all new output CAD files. The CAD platform and format version of the seed file overrides the value specified by the Output_Type parameter. If appending to existing CAD files, the seed drawing is ignored.  (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportCAD.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportCAD.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportCAD.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportCAD.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportCAD.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.RasterToVideo">
+            <summary>Creates a video file from a set of images. </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.RasterToVideo.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="input_folder"> The folder containing the images. The images in the folder should be of the same type (BMP or JPEG). (In, Required)</param>
+            <param name="out_video_file">The output video file (*.avi or *.mov). (Out, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToVideo.input_folder">
+            <summary> The folder containing the images. The images in the folder should be of the same type (BMP or JPEG). (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToVideo.out_video_file">
+            <summary>The output video file (*.avi or *.mov). (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToVideo.image_format">
+            <summary> The format of the images files in the folder. The output video will be created using the images of the chosen format. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToVideo.codec">
+            <summary> The codec used for compressing the frames while writing the video file. The list of codecs can vary on different machines.  (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToVideo.duration_method">
+            <summary> The method to be used for defining the output video duration.  (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToVideo.time">
+            <summary> Duration of the video to be output. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToVideo.quality">
+            <summary> The quality of the output video. The video can be exported at different qualities ranging from 1 to 100. The default value is 100. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToVideo.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToVideo.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToVideo.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToVideo.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToVideo.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.RasterToOtherFormat">
+            <summary>Geoprocessing tool that converts one or more raster dataset formats supported by ArcGIS.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.RasterToOtherFormat.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Input_Rasters">Input Rasters (in)</param>
+            <param name="Output_Workspace">Output Workspace (in)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToOtherFormat.Input_Rasters">
+            <summary>Input Rasters (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToOtherFormat.Output_Workspace">
+            <summary>Output Workspace (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToOtherFormat.Raster_Format">
+            <summary>Raster Format (in, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToOtherFormat.Derived_Workspace">
+            <summary>Derived Workspace (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToOtherFormat.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToOtherFormat.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToOtherFormat.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToOtherFormat.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.RasterToOtherFormat.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.SynchronizeMetadata">
+            <summary> Automatically updates an ArcGIS item's metadata with the current properties of the item. </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.SynchronizeMetadata.#ctor(System.Object,System.String)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="source">The item whose metadata will be synchronized. (In, Required)</param>
+            <param name="synctype">The type of synchronization that will take place. (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.SynchronizeMetadata.source">
+            <summary>The item whose metadata will be synchronized. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.SynchronizeMetadata.synctype">
+            <summary>The type of synchronization that will take place. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.SynchronizeMetadata.output">
+            <summary>Output Metadata (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.SynchronizeMetadata.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.SynchronizeMetadata.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.SynchronizeMetadata.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.SynchronizeMetadata.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.SynchronizeMetadata.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.XMLSchemaValidator">
+            <summary> Uses the .NET 3.5 Framework's XML software to validate an ArcGIS item's metadata or any XML file. The XML is checked to see  if it follows the structure and content rules outlined by an XML schema. Schemas written using the DTD or W3C XML Schema languages may be used with this tool. </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.XMLSchemaValidator.#ctor(System.Object,System.String)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="source">The item whose metadata will be validated or a stand-alone XML file that will be validated. (In, Required)</param>
+            <param name="schemaurl">The XML Schema or XML DTD that describes the structure and content of a valid XML document.  (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XMLSchemaValidator.source">
+            <summary>The item whose metadata will be validated or a stand-alone XML file that will be validated. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XMLSchemaValidator.schemaurl">
+            <summary>The XML Schema or XML DTD that describes the structure and content of a valid XML document.  (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XMLSchemaValidator.nsuri">
+            <summary>The XML namespace that will be validated for an XML Schema, if appropriate, or the root element of the document for an XML DTD.  (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XMLSchemaValidator.output">
+            <summary>Output Metadata (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XMLSchemaValidator.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XMLSchemaValidator.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XMLSchemaValidator.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XMLSchemaValidator.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.XMLSchemaValidator.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.ImportMetadata">
+            <summary>Geoprocessing tool that imports metadata to the target item after converting the source item's metadata to ArcGIS metadata, if appropriate.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.ImportMetadata.#ctor(System.Object,System.String,System.Object,System.String)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Source_Metadata">Source Metadata (in)</param>
+            <param name="Import_Type">Import Type (in)</param>
+            <param name="Target_Metadata">Target Metadata (in)</param>
+            <param name="Enable_automatic_updates">Enable automatic updates (in)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportMetadata.Source_Metadata">
+            <summary>Source Metadata (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportMetadata.Import_Type">
+            <summary>Import Type (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportMetadata.Target_Metadata">
+            <summary>Target Metadata (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportMetadata.Enable_automatic_updates">
+            <summary>Enable automatic updates (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportMetadata.Output_Metadata">
+            <summary>Output Metadata (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportMetadata.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportMetadata.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportMetadata.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportMetadata.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportMetadata.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.MultipatchToCollada">
+             <summary>
+             Converts one or more multipatch features into a collection of COLLADA (.dae) files and referenced texture image files in an output folder. The inputs can be a layer or a feature class.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.MultipatchToCollada.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="in_features"><summary>
+            The multipatch features to be exported.
+            (In, Required)</summary></param>
+            <param name="output_folder"><summary>
+            The destination folder where the output COLLADA files and texture image files will be placed.
+            (Out, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToCollada.in_features">
+            <summary>
+            The multipatch features to be exported.
+            (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToCollada.output_folder">
+            <summary>
+            The destination folder where the output COLLADA files and texture image files will be placed.
+            (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToCollada.prepend_source">
+             <summary> Prepend the file names of the output COLLADA files with the name of the source feature layer.
+            
+             (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToCollada.field_name">
+            <summary>
+            The feature attribute to use as the output COLLADA file name for each exported feature. If no field is specified, the feature's Object ID is used.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToCollada.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToCollada.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToCollada.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToCollada.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToCollada.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.KMLToLayer">
+             <summary>
+            Converts a KML or KMZ file into feature classes  and a layer file.  The layer file  maintains the symbology found within the original KML or KMZ file.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.KMLToLayer.#ctor(System.Object,System.Object)">
+             <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+             <param name="in_kml_file"><summary>
+            The KML or KMZ file to translate.
+             (In, Required)</summary></param>
+             <param name="output_folder"><summary>
+            The destination folder for the file geodatabase and layer (.lyr) file.
+            
+              (In, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.KMLToLayer.in_kml_file">
+             <summary>
+            The KML or KMZ file to translate.
+             (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.KMLToLayer.output_folder">
+             <summary>
+            The destination folder for the file geodatabase and layer (.lyr) file.
+            
+              (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.KMLToLayer.output_data">
+             <summary>
+            The name of the output file geodatabase and layer file (.lyr). Defaults to the name of the input KML file.
+             (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.KMLToLayer.include_groundoverlay">
+             <summary>Include ground overlay (raster, air photos, and so on).
+            Use caution if the KMZ points to a service that serves raster imagery. The tool will attempt to translate the raster imagery at all available scales. This process could be lengthy and possibly overwhelm the service.
+             (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.KMLToLayer.output_layer">
+            <summary>Output Layer (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.KMLToLayer.out_geodatabase">
+            <summary>Output Geodatabase (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.KMLToLayer.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.KMLToLayer.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.KMLToLayer.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.KMLToLayer.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.KMLToLayer.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.ImportFromE00">
+            <summary>Geoprocessing tool that imports ArcInfo interchange files</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.ImportFromE00.#ctor(System.Object,System.Object,System.String)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Input_interchange_file">Input interchange file (in)</param>
+            <param name="Output_folder">Output folder (in)</param>
+            <param name="Output_name">Output name (in)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportFromE00.Input_interchange_file">
+            <summary>Input interchange file (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportFromE00.Output_folder">
+            <summary>Output folder (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportFromE00.Output_name">
+            <summary>Output name (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportFromE00.E00OutputPath">
+            <summary>E00OutputPath (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportFromE00.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportFromE00.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportFromE00.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportFromE00.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ImportFromE00.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.ValidateMetadata">
+            <summary>Geoprocessing tool that exports metadata to a standard metadata format then validates the exported file.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.ValidateMetadata.#ctor(System.Object,System.Object,System.String,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Source_Metadata">Source Metadata (in)</param>
+            <param name="Translator">Translator (in)</param>
+            <param name="Schema_URL">Schema URL (in)</param>
+            <param name="Output_File">Output File (out)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadata.Source_Metadata">
+            <summary>Source Metadata (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadata.Translator">
+            <summary>Translator (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadata.Schema_URL">
+            <summary>Schema URL (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadata.Namespace_URI">
+            <summary>Namespace URI (in, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadata.Output_File">
+            <summary>Output File (out)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadata.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadata.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadata.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadata.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadata.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.ValidateMetadataMultiple">
+            <summary>Geoprocessing tool that exports metadata for many ArcGIS items to a designated folder, then validates the exported files.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.ValidateMetadataMultiple.#ctor(System.Object,System.Object,System.String,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Source_Metadata">Source Metadata (in)</param>
+            <param name="Translator">Translator (in)</param>
+            <param name="Schema_URL">Schema URL (in)</param>
+            <param name="Output_Folder">Output Folder (in)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadataMultiple.Source_Metadata">
+            <summary>Source Metadata (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadataMultiple.Translator">
+            <summary>Translator (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadataMultiple.Schema_URL">
+            <summary>Schema URL (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadataMultiple.Namespace_URI">
+            <summary>Namespace URI (in, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadataMultiple.Output_Folder">
+            <summary>Output Folder (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadataMultiple.Output_Values">
+            <summary>Output Values (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadataMultiple.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadataMultiple.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadataMultiple.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadataMultiple.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ValidateMetadataMultiple.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.ExportMetadataMultiple">
+            <summary>Geoprocessing tool that exports metadata for many ArcGIS items to a designated folder.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.ExportMetadataMultiple.#ctor(System.Object,System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Source_Metadata">Source Metadata (in)</param>
+            <param name="Translator">Translator (in)</param>
+            <param name="Output_Folder">Output Folder (in)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadataMultiple.Source_Metadata">
+            <summary>Source Metadata (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadataMultiple.Translator">
+            <summary>Translator (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadataMultiple.Output_Folder">
+            <summary>Output Folder (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadataMultiple.Output_Files">
+            <summary>Output Files (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadataMultiple.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadataMultiple.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadataMultiple.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadataMultiple.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadataMultiple.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.ExportMetadata">
+            <summary>Geoprocessing tool that updates and processes metadata before exporting it from ArcGIS to a stand-alone metadata XML file.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.ExportMetadata.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Source_Metadata">Source Metadata (in)</param>
+            <param name="Translator">Translator (in)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadata.Source_Metadata">
+            <summary>Source Metadata (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadata.Translator">
+            <summary>Translator (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadata.Output_File">
+            <summary>Output File (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadata.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadata.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadata.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadata.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExportMetadata.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.WFSToFeatureClass">
+            <summary>Imports a feature type from a web feature service (WFS) to a feature class in a geodatabase.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.WFSToFeatureClass.#ctor(System.String,System.String,System.Object,System.String)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="input_WFS_server">The URL of the source WFS service. T (In, Required)</param>
+            <param name="WFS_feature_type">The list of feature types published from the WFS service. (In, Required)</param>
+            <param name="out_path">The output location can be the root level of a geodatabase or a feature dataset within a geodatabase. If the output location is a feature dataset, the coordinates are converted from the source coordinate system to the coordinate system of the feature dataset. (In, Required)</param>
+            <param name="out_name">The name of the feature class to create within the output location. The name must not already exist in the geodatabase. By default, the feature type name is used. (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.WFSToFeatureClass.input_WFS_server">
+            <summary>The URL of the source WFS service. T (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.WFSToFeatureClass.WFS_feature_type">
+            <summary>The list of feature types published from the WFS service. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.WFSToFeatureClass.out_path">
+            <summary>The output location can be the root level of a geodatabase or a feature dataset within a geodatabase. If the output location is a feature dataset, the coordinates are converted from the source coordinate system to the coordinate system of the feature dataset. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.WFSToFeatureClass.out_name">
+            <summary>The name of the feature class to create within the output location. The name must not already exist in the geodatabase. By default, the feature type name is used. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.WFSToFeatureClass.out_feature_class">
+            <summary>Output Feature Class (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.WFSToFeatureClass.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.WFSToFeatureClass.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.WFSToFeatureClass.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.WFSToFeatureClass.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.WFSToFeatureClass.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.CADToGeodatabase">
+            <summary>Reads a CAD dataset and creates feature classes of the drawing. The feature classes are written to a geodatabase feature dataset.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.CADToGeodatabase.#ctor(System.Object,System.Object,System.String,System.Double)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="input_cad_datasets"> The collection of CAD files to convert to geodatabase features.  (In, Required)</param>
+            <param name="out_gdb_path"> The ArcSDE, file, or personal geodatabase where the Output Feature Dataset will be created. The target geodatabase must already exist.  (In, Required)</param>
+            <param name="out_dataset_name"> The name of the feature dataset to be created. (In, Required)</param>
+            <param name="reference_scale"> Enter the scale to use as a reference for the annotation. This sets the scale to which all symbol and text sizes in the annotation will be made relative.  (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.CADToGeodatabase.input_cad_datasets">
+            <summary> The collection of CAD files to convert to geodatabase features.  (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.CADToGeodatabase.out_gdb_path">
+            <summary> The ArcSDE, file, or personal geodatabase where the Output Feature Dataset will be created. The target geodatabase must already exist.  (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.CADToGeodatabase.out_dataset_name">
+            <summary> The name of the feature dataset to be created. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.CADToGeodatabase.reference_scale">
+            <summary> Enter the scale to use as a reference for the annotation. This sets the scale to which all symbol and text sizes in the annotation will be made relative.  (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.CADToGeodatabase.spatial_reference">
+            <summary>The spatial reference of the output feature dataset. If you wish to control other aspects of the spatial reference (i.e., the xy, z, m domains, resolutions, tolerances), use the relevant environments. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.CADToGeodatabase.out_dataset">
+            <summary>Output Feature Dataset (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.CADToGeodatabase.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.CADToGeodatabase.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.CADToGeodatabase.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.CADToGeodatabase.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.CADToGeodatabase.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.GPXtoFeatures">
+            <summary>Converts a .GPX file into features</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.GPXtoFeatures.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Input_GPX_File">Input GPX File (in)</param>
+            <param name="Output_Feature_class">Output Feature class (out)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.GPXtoFeatures.Input_GPX_File">
+            <summary>Input GPX File (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.GPXtoFeatures.Output_Feature_class">
+            <summary>Output Feature class (out)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.GPXtoFeatures.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.GPXtoFeatures.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.GPXtoFeatures.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.GPXtoFeatures.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.GPXtoFeatures.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster">
+            <summary>Creates  a raster using elevation, intensity,  or RGB values stored in the lidar files (*.las) referenced by the LAS dataset.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.#ctor(System.Object,System.Object)">
+             <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+             <param name="in_las_dataset"><summary>
+            The input LAS dataset. (In, Required)</summary></param>
+             <param name="out_raster"><summary>The location and name of the output raster. When storing a raster dataset in a geodatabase or in a folder such as an Esri Grid, no file
+            extension should be added to the name of the raster dataset. A file extension can be provided to define the raster's format when storing it in a folder: (Out, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.in_las_dataset">
+             <summary>
+            The input LAS dataset. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.out_raster">
+             <summary>The location and name of the output raster. When storing a raster dataset in a geodatabase or in a folder such as an Esri Grid, no file
+            extension should be added to the name of the raster dataset. A file extension can be provided to define the raster's format when storing it in a folder: (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.value_field">
+            <summary>Specifies  the lidar information that will be used in generating the raster output.  (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.interpolation_type">
+            <summary>The interpolation method used to produce the raster.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.data_type">
+            <summary>The data type of the output raster can be defined by the following keywords: (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.sampling_type">
+             <summary>
+            Specifies the method used  for interpreting the Sampling Value to define the resolution of the output raster. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.sampling_value">
+             <summary>
+            Specifies the value used in conjunction with the Sampling Type to define the resolution of the output raster.
+             (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.z_factor">
+            <summary>The factor by which Z values will be multiplied. This is typically used to convert Z linear units to match XY linear units. The default is 1, which leaves elevation values unchanged. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.LasDatasetToRaster.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.TableToExcel">
+            <summary>This tool converts ArcGIS tables to a Microsoft Office Excel files (.xls format).</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.TableToExcel.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Input_Table">Input Table (in)</param>
+            <param name="Output_Excel_File">Output Excel File (out)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToExcel.Input_Table">
+            <summary>Input Table (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToExcel.Output_Excel_File">
+            <summary>Output Excel File (out)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToExcel.Use_field_alias_as_column_header">
+            <summary>Use field alias as column header (in, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToExcel.Use_domain_and_subtype_description">
+            <summary>Use domain and subtype description (in, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToExcel.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToExcel.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToExcel.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToExcel.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.TableToExcel.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.ExcelToTable">
+            <summary>This script converts excel files to ArcGIS tables</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.ExcelToTable.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Input_Excel_File">Input Excel File (in)</param>
+            <param name="Output_Table">Output Table (out)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExcelToTable.Input_Excel_File">
+            <summary>Input Excel File (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExcelToTable.Output_Table">
+            <summary>Output Table (out)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExcelToTable.Sheet">
+            <summary>Sheet (in, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExcelToTable.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExcelToTable.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExcelToTable.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExcelToTable.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.ExcelToTable.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.FeaturesToJSON">
+             <summary>
+            
+            Converts features to  JSON format. The fields, geometry, and spatial reference of  features will be converted to their corresponding  JSON representation and written to a file with a .json extension.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.FeaturesToJSON.#ctor(System.Object,System.Object)">
+             <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+             <param name="in_features"><summary>
+            The features to convert to JSON. (In, Required)</summary></param>
+             <param name="out_json_file"><summary>
+            The output JSON  file.
+             (Out, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeaturesToJSON.in_features">
+             <summary>
+            The features to convert to JSON. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeaturesToJSON.out_json_file">
+             <summary>
+            The output JSON  file.
+             (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeaturesToJSON.format_json">
+            <summary>The JSON can be formatted to improve human readability similar to ArcGIS REST API specification's  PJSON (Pretty JSON)  format.
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeaturesToJSON.include_z_values">
+            <summary>Include Z value of the features to the JSON. 
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeaturesToJSON.include_m_values">
+            <summary>Include M value of the features to the JSON. 
+            (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeaturesToJSON.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeaturesToJSON.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeaturesToJSON.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeaturesToJSON.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.FeaturesToJSON.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.JSONToFeatures">
+             <summary>
+            
+            Converts JSON features based on ArcGIS REST API specification into a feature class. The feature class will have fields, geometry type, and spatial reference as defined in the JSON. </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.JSONToFeatures.#ctor(System.Object,System.Object)">
+             <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+             <param name="in_json_file"><summary>
+            The JSON file (.json) to convert.  (In, Required)</summary></param>
+             <param name="out_features"><summary>
+            The output feature class to create.
+             (Out, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.JSONToFeatures.in_json_file">
+             <summary>
+            The JSON file (.json) to convert.  (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.JSONToFeatures.out_features">
+             <summary>
+            The output feature class to create.
+             (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.JSONToFeatures.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.JSONToFeatures.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.JSONToFeatures.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.JSONToFeatures.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.JSONToFeatures.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.MultipatchToRaster">
+            <summary>Converts multipatch features to a raster dataset.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.MultipatchToRaster.#ctor(System.Object,System.Object)">
+             <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+             <param name="in_multipatch_features"><summary>
+            The input multipatch features to be converted to a raster. (In, Required)</summary></param>
+             <param name="out_raster"><summary>
+            The output raster dataset to be created. (Out, Required)</summary></param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToRaster.in_multipatch_features">
+             <summary>
+            The input multipatch features to be converted to a raster. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToRaster.out_raster">
+             <summary>
+            The output raster dataset to be created. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToRaster.cell_size">
+             <summary>
+            The cell size for the output raster dataset. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToRaster.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToRaster.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToRaster.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToRaster.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.MultipatchToRaster.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.ConversionTools.UpgradeMetadata">
+            <summary>Geoprocessing tool that updates an ArcGIS item's metadata or a stand-alone XML file to the current ArcGIS metadata format.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.ConversionTools.UpgradeMetadata.#ctor(System.Object,System.String)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Source_Metadata">Source Metadata (in)</param>
+            <param name="Upgrade_Type">Upgrade Type (in)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.UpgradeMetadata.Source_Metadata">
+            <summary>Source Metadata (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.UpgradeMetadata.Upgrade_Type">
+            <summary>Upgrade Type (in)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.UpgradeMetadata.Output_Metadata">
+            <summary>Output Metadata (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.UpgradeMetadata.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.UpgradeMetadata.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.UpgradeMetadata.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.UpgradeMetadata.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.ConversionTools.UpgradeMetadata.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+    </members>
+</doc>
